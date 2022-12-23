@@ -1,0 +1,80 @@
+.carga {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carga>div {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    padding: 0 !important;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: rotate(0deg);
+}
+
+.carga>div>div {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 0 auto;
+    /* overflow: hidden; */
+    border-radius: 70px;
+    top: -96px;
+    -webkit-border-radius: 70px;
+    -moz-border-radius: 70px;
+    -ms-border-radius: 70px;
+    -o-border-radius: 70px;
+}
+
+.carga>div>div>div {
+    border: solid 4px rgb(61, 84, 136);
+    width: 92px;
+    height: 92px;
+    position: absolute;
+    border-radius: 70px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0 !important;
+    top: 96px;
+    -webkit-border-radius: 70px;
+    -moz-border-radius: 70px;
+    -ms-border-radius: 70px;
+    -o-border-radius: 70px;
+}
+
+hr {
+    position: absolute;
+    width: 100vw;
+    height: 1px;
+    border: none;
+    background-color: black;
+}
+
+#hr1 {
+    top: 280px;
+}
+
+#hr2 {
+    top: 351px;
+}
+
+#cuadrado {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border: solid 1px;
+    left: 661px;
+    top: 274px;
+}

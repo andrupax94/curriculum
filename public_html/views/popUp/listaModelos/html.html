@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="views/popUp/listaModelos/css.css">
+<div id="listaModelo" class="flexc" ng-controller="listaModelo">
+    <h2>Modelos</h2>
+    <p>Listado De Modelos Disponibles, Puede Filtrar Y Selecionar Un Diseno para modificarlo o eliminarlo, para eLiminar Un Diseno el mismo no puede estar asignado a un producto.</p>
+    <hr>
+    <div class="flexr">
+        <div style="overflow-x: auto;" class="customS">
+
+            <table class="tabla1">
+                <tr>
+                    <td ng-click="orderByChange('id_modelo')">id
+                        <div class="flechaFiltro" ng-show="orderBy.selected==='id_modelo'">
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='ASC'"></div>
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='DESC'"></div>
+                        </div>
+                    </td>
+
+                    <td ng-click="orderByChange('nombre')">nombre
+                        <div class="flechaFiltro" ng-show="orderBy.selected==='nombre'">
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='ASC'"></div>
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='DESC'"></div>
+                        </div>
+                    </td>
+
+                    <td ng-click="orderByChange('tipo.tipo')">tipo
+                        <div class="flechaFiltro" ng-show="orderBy.selected==='tipo.nombre'">
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='ASC'"></div>
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='DESC'"></div>
+                        </div>
+                    </td>
+                    <td ng-click="orderByChange('linea')">linea
+                        <div class="flechaFiltro" ng-show="orderBy.selected==='linea'">
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='ASC'"></div>
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='DESC'"></div>
+                        </div>
+                    </td>
+                    <td ng-click="orderByChange('created_at')" title="Fecha De Creacion">F.Crea
+                        <div class="flechaFiltro" ng-show="orderBy.selected==='created_at'">
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='ASC'"></div>
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='DESC'"></div>
+                        </div>
+                    </td>
+                    <td ng-click="orderByChange('updated_at')" title="Fecha De Modificacion">F.Modi
+                        <div class="flechaFiltro" ng-show="orderBy.selected==='updated_at'">
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='ASC'"></div>
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='DESC'"></div>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr ng-repeat="item in modelos" ng-click="retornaModelos(item)">
+
+                    <td>[[item.id_modelo]]</td>
+                    <td>[[item.nombre]]</td>
+                    <td>[[item.tipo.tipo]]</td>
+                    <td>[[item.linea]]</td>
+                    <td>[[item.created_at|revertirfecha]]</td>
+                    <td>[[item.updated_at|revertirfecha]]</td>
+                </tr>
+                <tr>
+                    <td><input type="text" maxlength="10" validark tipo-valor="alfanumerico" placeholder="id_modelo" ng-model="filtro.id_modelo" ng-keyup="filtraModelos()"></td>
+                    <td><input type="text" maxlength="10" validark tipo-valor="alfanumerico" placeholder="nombre" ng-model="filtro.nombre" ng-keyup="filtraModelos()"></td>
+                    <td><input type="text" maxlength="10" validark tipo-valor="alfanumerico" placeholder="tipo" ng-model="filtro.tipo" ng-keyup="filtraModelos()"></td>
+                    <td><input type="text" maxlength="10" validark tipo-valor="alfanumerico" placeholder="linea" ng-model="filtro.linea" ng-keyup="filtraModelos()"></td>
+                    <td><input type="text" maxlength="10" validark tipo-valor="alfanumerico" placeholder="created_at" ng-model="filtro.created_at" ng-keyup="filtraModelos()"></td>
+                    <td><input type="text" maxlength="10" validark tipo-valor="alfanumerico" placeholder="updated_at" ng-model="filtro.updated_at" ng-keyup="filtraModelos()"></td>
+
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
+    <div id="pageButtons" class="flexr absoluteMidH">
+        <div class="pageButton flexc" ng-click="cambiaPagina(page-1)" getsvg="image/productCrud/flecha.svg,#ffffff"></div>
+        <div class="pageButton flexc" ng-click="cambiaPagina($index+1)" ng-class="{'pageButtonsSelected':  current_page===($index+1)}" ng-repeat="item in last_page">[[item]]</div>
+        <div class="pageButton flexc" ng-click="cambiaPagina(page+1)" getsvg="image/productCrud/flecha.svg,#ffffff"></div>
+    </div>
+</div>
+<div class="equis" ng-click="popUp.cierraPopUp()">
+    <div getsvg="image/productCrud/cruz.svg,#ffffff"></div>
+</div>

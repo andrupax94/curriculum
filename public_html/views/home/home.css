@@ -1,0 +1,211 @@
+    div#encabezado {
+        height: 174px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.41);
+    }
+    
+    div#mid {
+        position: relative;
+        margin: 0 auto;
+        padding: 0;
+        margin-top: 5px;
+        min-height: 354px;
+        overflow: hidden;
+    }
+    
+    div#pestaÃ±aPrincipal {
+        position: relative;
+        margin: 0 auto;
+        padding: 1px 0px 0px 6px;
+    }
+    
+    v {
+        background-color: white;
+    }
+    
+    #pestaÃ±aPrincipal>div {
+        position: absolute;
+        background: white;
+        height: 100%;
+    }
+    
+    .menu__container {
+        justify-content: space-between;
+    }
+    
+    .menu__buttom {
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: 100;
+        height: 85px;
+        background: rgba(0, 0, 0, 0.41);
+        color: white;
+        font-family: Century Gothic;
+        font-size: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        -webkit-transition: 0.1s background-color linear;
+        -moz-transition: 0.1s background-color linear;
+        -ms-transition: 0.1s background-color linear;
+        -o-transition: 0.1s background-color linear;
+    }
+    
+    .menu__buttom:hover>h5,
+    .menu__buttom__activo>h5 {
+        color: #014470;
+        opacity: 0.9;
+        font-weight: 900;
+    }
+    
+    .menu__buttom:hover,
+    .menu__buttom__activo {
+        background-color: #d4e8f4;
+    }
+    
+    .menu__buttom>span>svg g>path {
+        transition: fill 0.1s linear;
+        -webkit-transition: fill 0.1s linear;
+        -moz-transition: fill 0.1s linear;
+        -ms-transition: fill 0.1s linear;
+        -o-transition: fill 0.1s linear;
+    }
+    
+    .menu__buttom:hover>span>svg g *:not(g),
+    .menu__buttom__activo>span>svg g *:not(g) {
+        fill: #014470 !important;
+    }
+    
+    .menu__buttom>span {
+        width: 40px;
+        height: 100%;
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .menu__buttom>h5 {
+        font-size: 16px;
+        margin: auto 0;
+        text-align: justify;
+        width: 85px;
+        transition: 0.1s linear;
+        transition-property: "color,opacity,font-weight";
+        -webkit-transition: 0.1s linear;
+        -moz-transition: 0.1s linear;
+        -ms-transition: 0.1s linear;
+        -o-transition: 0.1s linear;
+    }
+    
+    .menu__buttom>span>svg {
+        margin: 0 auto;
+    }
+    
+    div#encabezado__foto {
+        background-image: url(../../image/fotoandres.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    
+    div#encabezado__titulos {
+        height: 100%;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    
+    div#encabezado__titulo {
+        color: white;
+        font-family: Forte;
+        font-size: 33px;
+    }
+    
+    div#encabezado__subTitulo {
+        color: white;
+        font-family: consolas;
+        opacity: 0.5;
+    }
+    
+    div#pestañaPrincipal>div {
+        position: relative;
+        background-color: #d4e8f4;
+        padding: 0;
+        overflow-y: scroll;
+        max-height: 354px;
+    }
+    
+    div#pestañaPrincipal {
+        position: relative;
+        margin: 0 auto;
+        padding: 0px 0px 0px 6px;
+    }
+    
+    .label {
+        position: relative;
+        margin: 0 auto;
+        width: 100%;
+        height: 49px;
+        overflow: hidden;
+        margin-top: 10px;
+        padding: 0;
+    }
+    
+    .label__icon {
+        position: absolute;
+        left: 9px;
+        display: flex;
+        justify-content: center;
+        background-color: #1e6787;
+        width: 49px;
+        height: 49px;
+        border-radius: 33px;
+        z-index: 1;
+    }
+    
+    .label__icon>svg {
+        width: 26px;
+        height: 26px;
+        margin: auto;
+        position: relative;
+    }
+    
+    .label__scuare {
+        width: 100%;
+        position: absolute;
+        height: 25px;
+        background-color: #014470;
+        z-index: 0;
+        top: 13px;
+        left: -12px;
+    }
+    
+    .label__rightScuare {
+        position: absolute;
+        right: -3px;
+        height: 30px;
+        width: 170px;
+        display: flex;
+        justify-content: center;
+        top: 8px;
+        transform: skewX(14deg);
+        background-color: #1f5684;
+    }
+    
+    div#pestañaPrincipal .container {
+        margin: 0 auto;
+    }
+    
+    .label__rightScuare>h5 {
+        position: relative;
+        height: 100%;
+        display: flex;
+        right: -2px;
+        flex-direction: column;
+        color: white;
+        transform: skewX(-13deg);
+        font-size: 17px;
+        font-weight: bold;
+        justify-content: center;
+    }

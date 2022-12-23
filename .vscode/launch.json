@@ -1,0 +1,60 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+   
+    "compounds": [
+        {
+            "name": "Launch Edge Headless and attach DevTools",
+            "configurations": [
+                "Launch Microsoft Edge in headless mode",
+             
+            ]
+        },
+        {
+            "name": "Launch Edge and attach DevTools",
+            "configurations": [
+                "Launch Microsoft Edge",
+
+            ]
+        }
+    ],
+    "configurations": [
+        
+        
+        {
+            "type": "msedge",
+            "name": "Launch Microsoft Edge",
+            "request": "launch",
+            "runtimeArgs": [
+                "--remote-debugging-port=9222"
+            ],
+            "webRoot": "${workspaceFolder}/public_html",
+            "pathMapping": {
+                "/": "${workspaceFolder}/public_html"
+            },
+            "url": "http://curriculumAndres.test", // Provide your project's url to finish configuring
+            "presentation": {
+                "hidden": true
+            }
+        },
+        {
+            "type": "msedge",
+            "name": "Launch Microsoft Edge in headless mode",
+            "request": "launch",
+            "runtimeArgs": [
+                "--headless",
+                "--remote-debugging-port=9222"
+            ],
+            "webRoot": "${workspaceFolder}/public_html",
+            "pathMapping": {
+                "/": "${workspaceFolder}/public_html"
+            },
+            "url": "http://curriculumAndres.test",
+            "presentation": {
+                "hidden": true
+            }
+        }
+    ],
+} 

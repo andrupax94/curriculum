@@ -1,0 +1,142 @@
+#subContainer {
+    position: relative;
+    max-width: 1000px;
+    border-radius: 6px;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 24px;
+}
+
+span#palomaCy {
+    display: block;
+    width: 63px;
+    height: 43px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.listaLogContainer {
+    margin: 0 auto;
+    margin-bottom: 31px;
+}
+
+#subContainer>div:nth-child(1)>h1 {
+    font-family: mistral;
+    color: #387BAD;
+    text-align: center;
+    margin: 0;
+    font-weight: 500;
+}
+
+#filtros>h5 {
+    width: 100%;
+    background-color: #387bad;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding: 4px;
+    font-size: 16px;
+    position: relative;
+}
+
+#filtros>div {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #eeeeee;
+    padding: 17px 22px;
+}
+
+div#filtros {
+    padding: 0;
+    box-shadow: 0px 0px 8px -3px;
+}
+
+.grupoFiltro>h5 {
+    width: fit-content;
+    background-color: #eeeeee;
+    position: absolute;
+    font-size: 14px;
+    top: -10px;
+    left: -2px;
+}
+
+.grupoFiltro {
+    position: relative;
+    border: solid 1px #b3b3b3;
+    padding: 13px 7px;
+}
+
+.grupoFiltro>button {
+    position: relative;
+    text-align: center;
+    color: #387bad;
+    font-weight: 700;
+    font-size: 13px;
+    height: 44px;
+    border: solid 3px #387bad;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.1s lineat;
+    padding: 0;
+    transition-property: background-color, color;
+}
+
+.grupoFiltro>button:hover,
+.buttonSelected {
+    color: white !important;
+    background-color: #387bad;
+}
+
+.grupoFiltro>input {
+    font-size: 13px;
+    padding: 0px;
+}
+
+.grupoFiltro>button:not(.grupoFiltro>button:first-child) {}
+
+div#vistaPrevia {
+    position: relative;
+}
+
+.listaLogContainer .customS {
+    padding: 0;
+}
+
+#vistaPrevia>h5 {
+    width: 100%;
+    background-color: #387bad;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    padding: 4px;
+    font-size: 16px;
+    position: relative;
+}
+
+#vistaPrevia>p {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #eeeeee;
+    padding: 17px 22px;
+    height: 300px;
+    overflow-y: hidden;
+    font-size: 13px;
+    text-overflow: ellipsis;
+}
+
+hr {
+    width: 70%;
+    position: relative;
+    margin: 16px auto;
+    opacity: 0.2;
+}
+
+h1 {
+    font-family: mistral;
+    color: #387BAD;
+    text-align: center;
+    margin: 0;
+    font-weight: 400;
+}

@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="views/home/experiencia/experiencia.css">
+<div ng-controller="homeExperiencia" id='' class='container row'>
+    <div class="label col-12">
+        <div class="label__icon" getsvg="image/experiencia.svg,#FFFFFF"></div>
+        <div class="label__scuare"></div>
+        <div class="label__rightScuare">
+            <h5>Experiencia</h5>
+        </div>
+    </div>
+    <div class="experiencia__container col-12 row">
+        <div class="experiencia" ng-repeat="ex in experiencia track by $index">
+            <div class="experiencia_bg">
+                <div class="experiencia__header">[[ex.puesto]]</div>
+                <p class="experiencia__empresa"><b>Empresa:</b>[[ex.empresa]]</p>
+                <p class="experiencia__funciones"><b>Funciones:</b>
+                    <ul>
+                        <li ng-repeat="funcion in ex.funciones track by $index">[[funcion]]</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="periodo">[[ex.periodo]]</div>
+        </div>
+    </div>
+</div>

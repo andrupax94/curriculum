@@ -1,0 +1,12 @@
+<link rel='stylesheet' href='views\popUp\inicioSesion\css.css'>
+<div ng-controller="inicioSesion" id="inicioSesion_container">
+    <h2>Inicio De Sesion</h2>
+    <input validar validark="alfanumericosimbolos" id="usuario_input" type="text" placeholdertop="Usuario O Email" min-length="4" maxlength="50" ng-model="usuario">
+    <input validar validark="alfanumericosimbolos" id="password_input" type="password" placeholdertop="Contraseña" min-length="8" maxlength="16" ng-model="contrasena">
+    <div>
+        <button id="inicioSesion_buttom" ng-click="iniciaSesion()" ng-class="{disabled: !validar[0]}">Acceder</button>
+        <button id="crearCuenta_buttom" ng-click="crearCuenta()">Crear Cuenta</button></div>
+</div>
+<div class="equis" ng-click="popUp.cierraPopUp()">
+    <div getsvg="image/productCrud/cruz.svg,#ffffff"></div>
+</div>

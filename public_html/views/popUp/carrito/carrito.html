@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="views/popUp/carrito/carrito.css">
+<div id="carrito" class="flexc" ng-controller="carrito">
+    <h2>Carrito</h2>
+    <p>Listado De Productos En Carrito, Puede Filtrar Y Modificar Seleccionando el icono de modificar a la derecha, Para ELiminar Un Producto el mismo no debe tener items en stock.</p>
+    <hr>
+    <div class="flexr">
+        <div style="overflow-x: auto;" class="customS">
+            <h5 ng-repeat="producto in carrito track by $index">[[producto.nombre]]</h5>
+        </div>
+
+    </div>
+    <div id="pageButtons" class="flexr absoluteMidH">
+        <div class="pageButton flexc" ng-click="cambiaPagina(page-1)" getsvg="image/productCrud/flecha.svg,#ffffff"></div>
+        <div class="pageButton flexc" ng-click="cambiaPagina($index+1)" ng-class="{'pageButtonsSelected':  current_page===($index+1)}" ng-repeat="item in last_page">[[item]]</div>
+        <div class="pageButton flexc" ng-click="cambiaPagina(page+1)" getsvg="image/productCrud/flecha.svg,#ffffff"></div>
+    </div>
+</div>
+<div class="equis" ng-click="popUp.cierraPopUp()">
+    <div getsvg="image/productCrud/cruz.svg,#ffffff"></div>
+</div>
+<div class="equis maximizar" ng-click="popUp.expandePopUp()">
+    <div ng-show="popUp.maximizado===true" getsvg="image/iconos/cuadroMax.svg,#ffffff"></div>
+    <div ng-show="popUp.maximizado===false" getsvg="image/iconos/cuadroMin.svg,#ffffff"></div>
+</div>

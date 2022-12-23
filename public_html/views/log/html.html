@@ -1,0 +1,101 @@
+<link rel="stylesheet" href="views/log/css.css">
+<div class="row">
+    <span getsvg="image/productCrud/palomaCy2.svg" id="palomaCy"></span>
+    <h1>Administrador: Log</h1>
+</div>
+<hr>
+<div id="listaLog" class="flexc">
+    <div class="listaLogContainer row justify-content-between col-11">
+        <div id="filtros" class="flexc col-12">
+            <h5>Filtros</h5>
+            <div class="row justify-content-between">
+                <div class="col-3 row grupoFiltro justify-content-between">
+                    <h5>Tipo De Error</h5>
+                    <button class="col-5-5" ng-click="tipoErrorPHP=!tipoErrorPHP;buscaLogs()" ng-class="{buttonSelected: tipoErrorPHP}">PHP</button>
+                    <button class="col-5-5" ng-click="tipoErrorJavascript=!tipoErrorJavascript;buscaLogs()" ng-class="{buttonSelected: tipoErrorJavascript}">JavaScript</button>
+                </div>
+                <div class="col-5 row grupoFiltro justify-content-between">
+                    <h5>Errores Por Tiempo</h5>
+                    <button ng-click="fechaIni='';fechaFinal='';erroresTiempo='todos';buscaLogs();" ng-class="{buttonSelected: erroresTiempo==='todos'}" class="col-2-5">Todos</button>
+                    <button ng-click="fechaIni='';fechaFinal='';erroresTiempo='mes';buscaLogs();" ng-class="{buttonSelected: erroresTiempo==='mes'}" class="col-2-5">Este Mes</button>
+                    <button ng-click="fechaIni='';fechaFinal='';erroresTiempo='semana';buscaLogs();" ng-class="{buttonSelected: erroresTiempo==='semana'}" class="col-2-5">Esta Semana</button>
+                    <button ng-click="fechaIni='';fechaFinal='';erroresTiempo='hoy';buscaLogs();" ng-class="{buttonSelected: erroresTiempo==='hoy'}" class="col-2-5">Hoy</button>
+                </div>
+                <div class="col-4 row grupoFiltro justify-content-between">
+                    <h5>Intervalo De fecha</h5>
+                    <input ng-model="fechaIni" ng-change="erroresTiempo='todos';buscaLogs()" class="col-5-5" type="date">
+                    <input ng-model="fechaFinal" ng-change="erroresTiempo='todos';buscaLogs()" class="col-5-5" type="date">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="listaLogContainer row justify-content-between col-11">
+        <div style="overflow-x: auto;" class="customS col-6">
+            <table class="tabla1">
+                <tr>
+                    <td ng-click="orderByChange('id')">id
+                        <div class="flechaFiltro" ng-show="orderBy.selected==='id'">
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='ASC'"></div>
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='DESC'"></div>
+                        </div>
+                    </td>
+                    <td ng-click="orderByChange('error')">error
+                        <div class="flechaFiltro" ng-show="orderBy.selected==='error'">
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='ASC'"></div>
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='DESC'"></div>
+                        </div>
+                    </td>
+                    <td ng-click="orderByChange('linea')">linea
+                        <div class="flechaFiltro" ng-show="orderBy.selected==='linea'">
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='ASC'"></div>
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='DESC'"></div>
+                        </div>
+                    </td>
+                    <td ng-click="orderByChange('archivo')">archivo
+                        <div class="flechaFiltro" ng-show="orderBy.selected==='archivo'">
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='ASC'"></div>
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='DESC'"></div>
+                        </div>
+                    </td>
+
+                    <td ng-click="orderByChange('created_at')" title="Fecha De Creacion">Creado
+                        <div class="flechaFiltro" ng-show="orderBy.selected==='created_at'">
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='ASC'"></div>
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='DESC'"></div>
+                        </div>
+                    </td>
+                    <td ng-click="orderByChange('updated_at')" title="Ultima Modificacion">U.Modi
+                        <div class="flechaFiltro" ng-show="orderBy.selected==='updated_at'">
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='ASC'"></div>
+                            <div getsvg="image/encabezado/flecha.svg,#ffffff" ng-show="orderBy.aD==='DESC'"></div>
+                        </div>
+                    </td>
+
+                </tr>
+                <tr ng-repeat="item in logs track by item.id" ng-click="buscaLog(item.id)">
+
+
+                    <td>[[item.id]]</td>
+                    <td title="[[item.error]]">[[item.error]]</td>
+                    <td>[[item.linea]]</td>
+                    <td title="[[item.archivo]]">[[item.archivo]]</td>
+                    <td>[[item.created_at|revertirfecha]]</td>
+                    <td>[[item.updated_at|revertirfecha]]</td>
+                </tr>
+                <tr>
+                    <td><input type="text" maxlength="10" validark="alfanumerico" tipo-valor="alfanumerico" placeholder="id" ng-model="filtro.id" ng-keyup="filtraLog()"></td>
+                    <td><input type="text" maxlength="10" validark="alfanumerico" tipo-valor="alfanumerico" placeholder="error" ng-model="filtro.error" ng-keyup="filtraLog()"></td>
+                    <td><input type="text" maxlength="10" validark="alfanumerico" tipo-valor="alfanumerico" placeholder="linea" ng-model="filtro.linea" ng-keyup="filtraLog()"></td>
+                    <td><input type="text" maxlength="10" validark="alfanumerico" tipo-valor="alfanumerico" placeholder="archivo" ng-model="filtro.archivo" ng-keyup="filtraLog()"></td>
+                    <td><input type="text" maxlength="10" validark="alfanumerico" tipo-valor="alfanumerico" placeholder="created_at" ng-model="filtro.created_at" ng-keyup="filtraLog()"></td>
+                    <td><input type="text" maxlength="10" validark="alfanumerico" tipo-valor="alfanumerico" placeholder="updated_at" ng-model="filtro.updated_at" ng-keyup="filtraLog()"></td>
+                </tr>
+
+            </table>
+        </div>
+        <div id="vistaPrevia" class="col-5">
+            <h5>Info Error</h5>
+            <p title="[[infoError]]">[[infoError]]</p>
+        </div>
+    </div>
+</div>

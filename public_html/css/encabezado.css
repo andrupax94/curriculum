@@ -1,0 +1,788 @@
+header {
+    position: fixed;
+    top: 0;
+    height: 80px;
+    width: 100vw;
+    display: none;
+    z-index: 1000;
+    background: rgb(255 255 255);
+    /* background: radial-gradient(circle, rgb(230 230 230 / 90%) 0%, rgb(255 255 255 / 91%) 2%); */
+    box-shadow: 0px 1px 10px -7px;
+    -webkit-backface-visibility: hidden;
+}
+
+#hBurger {
+    --hBurgerWH: 25px;
+    width: 80px;
+    height: 80px;
+}
+
+#mlBurger {
+    cursor: pointer;
+    --hBurgerWH: 25px;
+    width: 81px;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#hLeftButtons {
+    --bWidth: 95px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+#hCircle {
+    display: flex;
+    height: 123px;
+    width: 123px;
+    border-radius: 75px;
+    box-shadow: 0px 6px 17px -14px;
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 57%, rgba(230, 230, 230, 1) 87%);
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: 0.1s linear opacity;
+}
+
+#hSearch {
+    height: 41px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    display: flex;
+    border-radius: 50px;
+    border: solid #C1C1C1 1pt;
+    margin: auto 0;
+    flex-direction: row;
+}
+
+#buscarPht {
+    margin: 0 !important;
+}
+
+#buscarPht input {
+    border-radius: inherit;
+}
+
+#hRightButtons {
+    position: relative;
+    display: flex;
+    margin-left: 19px;
+}
+
+#hSearch>svg {
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#hCircle svg {
+    width: 53px;
+    height: 81px;
+    position: relative;
+    margin: 0 auto;
+    display: block;
+}
+
+#hBurger svg {
+    width: var(--hBurgerWH);
+    height: var(--hBurgerWH);
+    display: block;
+    margin: 0 auto;
+    transition: linear 0.1s;
+    transition-property: height, width;
+}
+
+#mlBurger svg {
+    width: var(--hBurgerWH);
+    height: var(--hBurgerWH);
+    display: block;
+    margin: 0 auto;
+    transition: linear 0.1s;
+    transition-property: height, width;
+}
+
+#hLeftButtons button {
+    font-size: 15px;
+    font-family: 'Quicksand';
+    background: none;
+    border: none;
+    width: var(--bWidth);
+    transition: background-color linear 0.1s;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    color: #595959;
+    align-items: center;
+    font-weight: 100;
+}
+
+#hLeftButtons span {
+    position: absolute;
+    width: var(--bWidth);
+    left: 0;
+    height: 6px;
+    background-color: #387BAD;
+    bottom: 0;
+}
+
+div#hLeft {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 0;
+    height: 100%;
+}
+
+div#hRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    position: relative;
+    right: 0;
+    height: 100%;
+}
+
+#hSearch span {
+    position: relative;
+    height: 100%;
+    width: auto;
+    padding: 7px;
+}
+
+#hSearch>div {
+    display: block;
+    width: 100%;
+    font-size: 12pt;
+    position: relative;
+    height: 39px !important;
+    border: none;
+    border-radius: inherit;
+}
+
+#hSearch span svg {
+    width: 30px;
+    height: 30px;
+}
+
+#hRightButtons div {
+    position: relative;
+    display: flex;
+    border-radius: 50px;
+    width: 177px;
+    margin-right: -128px;
+}
+
+#hRightButtons div:nth-child(2n+1) {
+    background-color: #03045d;
+}
+
+#hRightButtons span {
+    display: flex;
+    position: relative;
+    width: 23px;
+    margin: auto 0;
+    margin-left: 14px;
+    margin-right: 15px;
+    height: 23px;
+}
+
+#hRightButtons div:nth-child(2n) {
+    background-color: #00B4D8;
+}
+
+#hRightButtons p {
+    color: white;
+    margin: auto 0;
+}
+
+div#hCenter {
+    height: 100%;
+}
+
+#hSearch input:focus {
+    border: none;
+}
+
+footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    width: 100vw;
+}
+
+div#fTop {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    background: #F9F9F9;
+    width: 100%;
+}
+
+#fTop>h2 {
+    margin: auto 0;
+    font-family: Rage;
+    color: #387BAD;
+    font-size: 44pt;
+    font-weight: 500;
+    text-align: center;
+    max-width: 234px;
+}
+
+#fTop>div>span {
+    width: 39px;
+    height: 39px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    overflow: hidden;
+    flex-direction: column;
+    border-radius: 50px;
+    margin: auto 0;
+    margin-left: 6px;
+    position: relative;
+    transition: 0.1s linear background !important;
+}
+
+#fTop>div>span:nth-child(2n) {
+    background: #00B4D8;
+}
+
+#fTop>div>span:nth-child(2n+1) {
+    background: #387BAD;
+}
+
+#fTop>div>span>svg {
+    width: 25px;
+    height: 25px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+#fInstagram {
+    --FInstagramOp: 0;
+}
+
+#fInstagram:hover {
+    --FInstagramOp: 1;
+}
+
+#fGmail {
+    --FGmailOp: 0;
+}
+
+#fGmail:hover {
+    --FGmailOp: 1;
+    background: white !important;
+}
+
+#fInstagram div {
+    opacity: var(--FInstagramOp);
+    transition: 0.1s opacity linear;
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d) !important;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    z-index: 0;
+}
+
+#fGmail div {
+    opacity: var(--FGmailOp);
+    transition: 0.1s opacity linear;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#fFacebook:hover {
+    background: #7A9BC9 !important;
+}
+
+#fWhatapp:hover {
+    background: #41BA4F !important;
+}
+
+#fGmail>div>svg {
+    width: 25px;
+    position: relative;
+    height: 25px;
+    margin: 0 auto;
+}
+
+div#fMid {
+    height: auto;
+    width: 100%;
+    background: #F9F9F9;
+}
+
+div#fBottom {
+    height: auto;
+    display: flex;
+    background-color: #387BAD;
+    justify-content: center;
+    text-align: center;
+    padding: 5px 0px;
+}
+
+#fBottom h5 {
+    color: white;
+    margin: auto 0;
+    font-family: Quicksand;
+    font-size: 14px;
+}
+
+#fMid>div>div {
+    position: relative;
+    margin: 0 auto;
+    max-width: 531px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#fMid>div>div>span {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: -16px;
+    margin: 0 10px;
+}
+
+#fMid>div>div>div {
+    position: relative;
+    background-color: white;
+    padding: 2px 8px 2px 10px;
+    border-radius: 7px;
+}
+
+#fMid>div>div>div>input[type="text"] {
+    font-family: Quicksand;
+    border: none;
+    height: 50px;
+    color: #629FC4;
+}
+
+#fMid>div>div>div>input[type="text"]::placeholder {
+    color: #629FC4;
+}
+
+#fMid>div>div>div>button {
+    height: 40px;
+    border-radius: 6px;
+    color: white;
+    border: none;
+    background: #387BAD;
+    font-size: 14px;
+    font-family: Quicksand;
+    position: relative;
+    margin: auto 0;
+}
+
+#fMid>div>div>span:nth-child(3) {
+    transform: scaleX(-1);
+}
+
+#fMid>div>h4 {
+    color: white;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    font-family: Quicksand;
+    margin: 10px auto;
+    max-width: 553px;
+    top: 10px;
+    position: relative;
+}
+
+#hLeftButtons button:hover {
+    background-color: #f9f9f9;
+}
+
+#hBurger svg:hover {
+    width: 20px;
+    height: 20px;
+}
+
+div#hBurger:hover {
+    --hBurgerWH: 20px;
+    background-color: #f9f9f9;
+}
+
+#mlBurger svg:hover {
+    width: 20px;
+    height: 20px;
+}
+
+div#mlBurger:hover {
+    --hBurgerWH: 20px;
+    background-color: #f9f9f9;
+}
+
+.placeholderTop {
+    position: absolute;
+}
+
+input.placeholderTopI {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.placeholderTopD {
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+    left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: inherit;
+    z-index: 2;
+    transition: 0.1s linear;
+    transition-property: height, top;
+}
+
+.placeholderTopD h5 {
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    transition: 0.1s all linear;
+    border-radius: 50px;
+}
+
+span#palomaCy {
+    position: relative;
+    width: 63px;
+    height: 43px;
+}
+
+#hSearch input {
+    padding-left: 11px;
+    border: none;
+}
+
+div#menuLateral {
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    justify-content: start;
+    overflow: hidden;
+    box-shadow: 0px 0px 7px -4px;
+    background: linear-gradient(95deg, rgb(56 123 173) 35%, rgb(5 175 212) 100%);
+    border-left: solid 0px white;
+}
+
+div#menuLateral>div>h4 {
+    font-size: 16px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-family: Quicksand;
+    color: #707070;
+}
+
+#menuLateral>div:nth-child(1) {
+    position: absolute;
+    height: 82px;
+    justify-content: start;
+    width: 100%;
+    z-index: 2;
+    background-color: #ffffff;
+}
+
+.menuLateralOpc {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 10px;
+    top: 80px;
+    z-index: 1;
+    margin-bottom: 70px;
+}
+
+.menuLateralOpc>div>div {
+    cursor: pointer;
+    position: relative;
+    height: 51px;
+    justify-content: start;
+    padding: 7px;
+    padding-left: 10px;
+    border-radius: 50px;
+}
+
+.menuLateralOpc>div>div>div:nth-child(1) {
+    width: 35px;
+    height: 35px;
+}
+
+.menuLateralOpc>div>div>h5 {
+    color: white;
+    height: 100%;
+    top: 2px;
+    position: relative;
+    font-weight: 700;
+    margin-left: 27px;
+    font-size: 15px;
+    user-select: none;
+}
+
+.menuLateralOpc>div>div>div:nth-child(3) {
+    position: absolute;
+    right: 27px;
+    top: 25px;
+    width: 10px;
+    height: 10px;
+    transform: rotate(26deg);
+    transition: 0.2s rotate linear;
+}
+
+.menuLateralOpc>div>div:hover {
+    background-color: #0c0c0c14;
+}
+
+.menuLateralOpc>div>div:nth-child(3)>svg {
+    width: 10px;
+    height: 10px;
+}
+
+#menuLateralOpc {
+    height: auto;
+    position: absolute;
+    border-radius: 35px 0 0 35px;
+    transition: linear top;
+    left: 10px;
+}
+
+#menuLateralOpc>div>div {
+    position: relative;
+    background: none;
+    top: 0px;
+    left: 0px;
+    transition: linear top;
+}
+
+#menuLateralOpc>div>div path {
+    fill: #273944 !important;
+}
+
+#menuLateralOpc>div>div>h5 {
+    color: #273944;
+}
+
+#menuLateralOpc>div>div:nth-child(3) polygon {
+    fill: #273944;
+}
+
+#menuLateralOpc:after {
+    content: "";
+    height: 32px;
+    pointer-events: none;
+    width: 110px;
+    display: block;
+    position: absolute;
+    margin: 0px 1px 0px auto;
+    right: -17px;
+    background-image: url(../image/encabezado/raja.svg) !important;
+    bottom: -31px;
+    transform: scaleY(-1);
+    z-index: 2;
+    background-repeat: no-repeat;
+}
+
+div#barraLateralCY {
+    position: relative;
+    height: 255px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    justify-content: end;
+    padding: 0 !important;
+    bottom: 0;
+    margin-top: 20px;
+}
+
+div#barraLateralCY>svg {
+    position: relative;
+    width: 142px;
+    height: auto;
+    margin: 0 auto;
+    bottom: 65px;
+}
+
+#menuLateralOpc>div {
+    position: relative;
+    height: 51px;
+    overflow: hidden;
+    border-radius: 35px 0 0 35px;
+    background: white;
+}
+
+#menuLateralOpc:before {
+    content: "";
+    height: 32px;
+    width: 113px;
+    display: block;
+    position: absolute;
+    right: -19px;
+    background-image: url(../image/encabezado/raja.svg) !important;
+    bottom: 0;
+    top: -31px;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+#menuLateralOpc>div>div>div:nth-child(3) polygon {
+    fill: #387BAD;
+}
+
+.menuLateralOpc>div>div:hover:not(#menuLateralOpc>div>div) {
+    background: none;
+    background-color: #00000026 !important;
+}
+
+.menuLateralOpc>div {
+    height: auto;
+    position: relative;
+}
+
+#menuLateralOpc {
+    position: absolute;
+}
+
+#menuLateralOpc ol {
+    left: 2px;
+    padding: 0px;
+    padding-left: 84px;
+    position: relative;
+    margin-bottom: 35px;
+}
+
+#menuLateralOpc li {
+    user-select: none;
+    font-size: 14px;
+    list-style: disc;
+    padding: 2px;
+    cursor: pointer;
+}
+
+#menuLateralOpc li:hover {
+    background-color: #0000000d;
+}
+
+#noClass {
+    display: block;
+    height: auto;
+    background: linear-gradient(95deg, rgb(56 123 173) 35%, rgb(5 175 212) 100%);
+}
+
+#menuLateral>div {
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+}
+
+.movilHRightButtons {
+    width: 40px !important;
+    height: 40px !important;
+    margin: auto 2px !important;
+}
+
+.movilHRightButtons>span {
+    margin: auto !important;
+}
+
+div#movilMenuLateralPaloma {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    bottom: 0;
+    margin: auto;
+}
+
+supermain.customS {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+div#hCircle:hover {
+    opacity: 1;
+}
+
+#footerWave {
+    position: relative;
+    height: 95px;
+    width: 100%;
+    /* top: -100px; */
+    background: transparent;
+}
+
+#footerWave .wave {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    -webkit-mask-image: url(../image/encabezado/footerWave.svg);
+    -webkit-mask-position: bottom;
+    -webkit-mask-size: cover;
+    mask-image: url(../image/encabezado/footerWave.svg);
+    mask-position: bottom;
+    mask-size: cover;
+    background-color: #F9F9F9;
+    backface-visibility: visible;
+    top: 0px;
+    -webkit-backface-visibility: visible;
+}
+
+#footerWave .wave>svg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#fTop>div {
+    max-width: 205px;
+}
+
+#fMid>div {
+    width: 100%;
+    height: 100%;
+    background: rgb(56, 123, 173);
+    background: linear-gradient(152deg, rgba(56, 123, 173, 1) 0%, rgba(239, 245, 249, 1) 100%);
+    border-radius: 200px 200px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+#footerWave .wave:nth-child(2) {
+    top: -3px;
+    background-color: black;
+    opacity: 0.05;
+    z-index: 0;
+}

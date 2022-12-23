@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app=candres ">
+
+<head ng-controller="headController ">
+    <meta charset="utf-8 ">
+    <meta name="format-detection " content="telephone=no ">
+    <meta name="msapplication-tap-highlight " content="no ">
+    <meta name="color-scheme " content="light dark ">
+    <meta name="viewport " content="initial-scale=1, width=device-width, viewport-fit=cover ">
+
+    <title>Yleym</title>
+
+    <link rel="stylesheet " href="css/bootstrap.css ">
+    <link rel="preconnect " href="https://fonts.googleapis.com ">
+    <link rel="preconnect " href="https://fonts.gstatic.com " crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap " rel="stylesheet ">
+    <link rel="stylesheet " href="css/basic.css ">
+    <link rel="stylesheet " href="css/encabezado.css ">
+    <link rel="stylesheet " ng-if="mTemplate.template==='productoCrud.html' ||mTemplate.template==='productoOtros.html' " href="views/productoCrud/css.css ">
+    <link ng-if="mTemplate.template==='stock.html' " rel="stylesheet " href="views/stock/css.css ">
+    <link ng-if="mTemplate.template==='views/movilIndex/html.html' " rel="stylesheet " href="views/movilIndex/css.css ">
+
+</head>
+
+<body ng-controller="bodyController " class="customS ">
+    <div id="background "></div>
+
+    <header class="sHidden " ng-include=" 'header.html' " ng-controller="hController ">
+    </header>
+
+    <main id="container " class="flexc sHidden " ng-include="mTemplate.template ">
+    </main>
+
+    <!--<footer class="sHidden " ng-include=" 'footer.html' " ng-controller="fController ">
+
+    </footer>!-->
+    <movilFooter class="d-flex d-sm-none " ng-include="mFHTML[0] " ng-controller="mFController ">
+    </movilFooter>
+    <div ng-include=" 'popUps.html' ">
+    </div>
+
+
+</body>
+
+<script type="text/javascript " src="js/jquery-3.6.0.min.js "></script>
+<script src="js/angular.min.js "></script>
+<script src="js/angular-route.min.js "></script>
+
+<script src="js/gsap.min.js "></script>
+<script src="js/module.js "></script>
+<script src="js/filters.js "></script>
+<script src="js/factories.js "></script>
+<script src="js/directives.js "></script>
+<script src="js/controller.js "></script>
+<script src="js/config.js "></script>
+<script src="views/popUp/listaProducto/js.js "></script>
+<script src="views/popUp/listaColores/js.js "></script>
+<script src="views/popUp/listaDisenos/js.js "></script>
+<script src="views/popUp/listaModelos/js.js "></script>
+<script src="views/popUp/listaMateriales/js.js "></script>
+<script src="views/popUp/listaTipos/js.js "></script>
+
+<script ng-if="mTemplate.template==='productoCrud.html' " src="views/productoCrud/js.js "></script>
+<script ng-if="mTemplate.template==='productoCrud.html' " src="views/productoCrud/datosBasicos/js.js "></script>
+<script ng-if="mTemplate.template==='productoCrud.html' " src="views/productoCrud/colorModelo/js.js "></script>
+<script ng-if="mTemplate.template==='productoCrud.html' " src="views/productoCrud/diseno/js.js "></script>
+<script ng-if="mTemplate.template==='productoCrud.html' " src="views/productoCrud/imagenes/js.js "></script>
+<script ng-if="mTemplate.template==='productoCrud.html' " src="views/productoCrud/ultimoPaso/js.js "></script>
+
+<script ng-if="mTemplate.template==='stock.html' " src="views/stock/js.js "></script>
+
+<script ng-if="mTemplate.template==='views/movilIndex/html.html' " src="views/movilIndex/js.js "></script>
+
+<script ng-if="mTemplate.template==='productoOtros.html' " src="views/productoOtros/js.js "></script>
+<script ng-if="mTemplate.template==='productoOtros.html' " src="views/productoOtros/color/js.js "></script>
+<script ng-if="mTemplate.template==='productoOtros.html' " src="views/productoOtros/disenoS/js.js "></script>
+<script ng-if="mTemplate.template==='productoOtros.html' " src="views/productoOtros/modelo/js.js "></script>
+<script ng-if="mTemplate.template==='productoOtros.html' " src="views/productoOtros/material/js.js "></script>
+<script ng-if="mTemplate.template==='productoOtros.html' " src="views/productoOtros/tipo/js.js "></script>
+
+<script ng-if="mTemplate.template==='views/log/html.html' " src="views/log/js.js "></script>
+
+
+</html>

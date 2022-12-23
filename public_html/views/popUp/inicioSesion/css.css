@@ -1,0 +1,11 @@
+#popUpView {
+    width: 200px;
+    margin: 0 auto;
+    background: white;
+    padding: 10px;
+    min-height: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

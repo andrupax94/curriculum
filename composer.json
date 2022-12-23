@@ -1,0 +1,8 @@
+{
+    "require": {
+        "awobaz/compoships": "^2.1"
+    },
+    "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.7"
+    }
+}

@@ -1,0 +1,73 @@
+div#descripcion>p {
+    font-family: Century Gothic;
+    font-size: 10px;
+    text-align: justify;
+    text-indent: 12px;
+}
+
+div#descripcion {
+    top: 10px;
+    position: relative;
+    padding: 0px 4px 0px 4px;
+}
+
+.adicionales {
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 14px;
+}
+
+.adicionales__icon {
+    position: absolute;
+    width: 49px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #1e6787;
+    transform: skewX(-10deg);
+    left: -5px;
+    justify-content: center;
+    z-index: 1;
+}
+
+.adicionales__icon>svg {
+    position: relative;
+    width: 26px;
+    height: 26px;
+    left: 13px;
+    transform: skewX(10deg);
+}
+
+.adicionales__scuare {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -4px;
+    background-color: #014470;
+    z-index: 0;
+    transform: skewX(-10deg);
+}
+
+.adicionales>h5 {
+    z-index: 1;
+    color: white;
+    position: absolute;
+    font-family: Century Gothic;
+    font-size: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    left: 46px;
+    padding: 0px 9px;
+    width: 69%;
+    min-width: 116px;
+    overflow: hidden;
+}
+
+div#adicionales {
+    justify-content: space-between;
+    margin-top: 10px !important;
+}

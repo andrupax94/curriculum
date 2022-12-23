@@ -1,0 +1,30 @@
+<div id="popUpContainer" ng-click="cancelPropagation($event)">
+    <div id="popUpView" class="col-12" ng-include="popUp.template">
+    </div>
+</div>
+
+<div id="modal" ng-click="cancelPropagation($event)" ng-show="modales.activo" class="flexc">
+    <div class="flexc" id="modalPregunta" ng-show="modales.pregunta.activo===true">
+        <div>?</div>
+        <h3>[[modales.pregunta.h3]]</h3>
+        <hr>
+        <p>[[modales.pregunta.info]]</p>
+        <div class="flexr">
+            <button ng-click="modales.pregunta.aceptar()">Si</button>
+            <button ng-click="modales.cerrar()">No</button>
+        </div>
+    </div>
+</div>
+<div id="mensajes" ng-click="cancelPropagation($event)">
+    <div index="[[msn.index]]" ng-repeat="msn in mensajes.mensaje" style="bottom:[[60*$index]]px" class="flexc">
+        <div class="mensaje [[msn.tipo]] flexr">
+            <div class="flexr">
+                <div></div>
+                <div></div>
+                <h5 title="[[msn.text]]">[[msn.text]]</h5>
+            </div>
+            <div></div>
+        </div>
+
+    </div>
+</div>

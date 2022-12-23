@@ -1,0 +1,309 @@
+#popUpView {
+    max-width: 700px;
+    height: 500px;
+    position: relative;
+    margin: 0 auto;
+    min-width: 200px;
+    min-height: 200px;
+    background-color: white;
+    overflow: hidden;
+    padding: 25px;
+    box-shadow: 0px 0px 7px -2px;
+}
+
+div#popUpContainer {
+    display: flex !important;
+}
+
+#popUpContainer>div {
+    padding: 40px;
+    position: relative;
+}
+
+h2 {
+    margin-bottom: 12px;
+}
+
+#popUpContainer>div p {
+    text-align: justify;
+    font-size: 14px;
+    margin: 0;
+}
+
+#popUpContainer>div hr {
+    width: 70%;
+    margin: 15px auto;
+}
+
+.tabla1 tbody tr:nth-child(1) td:nth-child(2n) {
+    background-color: #00B4D8;
+}
+
+.tabla1 tbody tr:nth-child(1)>td {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    border-color: transparent !important;
+}
+
+.tabla1 tbody tr>td {
+    text-transform: capitalize;
+    max-width: 140px;
+    border-left: solid 10px;
+    border-right: solid 10px;
+    font-size: 12px;
+    padding: 7px;
+    padding-right: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tabla1 tbody tr:nth-child(1) td:nth-child(2n+1) {
+    background-color: #387BAD;
+}
+
+td {}
+
+.tabla1 tbody tr {
+    position: relative;
+}
+
+td.tdVacio {
+    background: none !important;
+}
+
+td.tdOptions>div {
+    cursor: pointer;
+    width: 25px;
+    border-radius: 25px;
+    height: 25px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0.6;
+    transition: opacity linear 0.1s;
+}
+
+td input[type="text"] {
+    text-transform: capitalize;
+    width: 100%;
+    font-size: 12px;
+    height: 20px;
+    padding: 8px 0px;
+}
+
+.tabla1>div {
+    position: relative;
+}
+
+.tabla1 tbody tr:nth-child(2n)>td {
+    background-color: #F2F2F2;
+    border-color: #F9F9F9;
+}
+
+.tabla1 tbody tr:hover>td:not(.tabla1 tbody tr:first-child>td, .tabla1 tbody tr:last-child>td) {
+    background-color: #387bad !important;
+    color: white;
+    cursor: pointer;
+    border-color: #F9F9F9;
+}
+
+.tabla1 tbody tr:nth-child(2n+1)>td {
+    background-color: #E0E0E3;
+    border-color: #EDEDED;
+}
+
+td {}
+
+.tabla1 tbody tr>td:first-child {
+    border-left-width: 0px;
+}
+
+.tabla1 tbody tr:nth-child(2n+1)>td:last-child {
+    border-right-width: none;
+}
+
+.tabla1 tbody tr:last-child>td {
+    background-color: white;
+}
+
+.tdStock>div {
+    background-color: #14a214;
+}
+
+td.tdOptions>div>svg {
+    width: 15px;
+    height: 15px;
+    position: relative;
+    margin: 0 auto;
+}
+
+td.tdOptions>div:hover {
+    opacity: 1;
+}
+
+.tdModificar>div {
+    background-color: #387bad;
+}
+
+.tdEliminar>div {
+    background-color: #fa5661;
+}
+
+.tdOptions {
+    padding: 0 !important;
+}
+
+.tabla1 tbody tr>td:last-child {
+    border-right-width: 0px;
+}
+
+.tabla2 tbody tr:nth-child(2n)>td {
+    border-color: #F2F2F2;
+    background-color: #F2F2F2;
+    border-left-width: 10px;
+    border-right-width: 10px;
+}
+
+.tabla2 tbody tr:nth-child(2n+1)>td {
+    border-color: #E0E0E1;
+    background-color: #E0E0E1;
+    border-left-width: 10px;
+    border-right-width: 10px;
+}
+
+.tabla2 tbody tr>td:first-child {
+    height: 25px;
+}
+
+.tabla2 tbody tr:first-child>td {
+    border: none !important;
+}
+
+.tabla2 tbody tr:last-child>td {
+    background-color: #F2F2F2;
+    height: 31px;
+    border: none;
+    border-bottom: solid 8px white;
+}
+
+.tabla2 {
+    border-spacing: 2px 0px;
+    border-collapse: inherit;
+    margin-left: 7px;
+}
+
+.tabla2 tbody tr:first-child>td {
+    background-color: #387BAD;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 700;
+    padding: 0 !important;
+}
+
+.tabla2 tr {
+    height: 13px !important;
+}
+
+.tabla1 tbody tr:first-child:hover>td {}
+
+p {}
+
+div#pageButtons {
+    position: absolute;
+    bottom: 13px;
+    width: fit-content;
+    overflow: hidden;
+    border-radius: 5px;
+    height: 26px;
+}
+
+#pageButtons>div:nth-child(2n) {
+    background-color: #ededed;
+    color: #5f5f5f;
+}
+
+#pageButtons>div:nth-child(2n+1) {
+    background-color: #ededed;
+    color: #5f5f5f;
+}
+
+#pageButtons>div svg {
+    width: 10px !important;
+    height: 12px !important;
+    margin: 0 auto;
+}
+
+#pageButtons>div:first-child {
+    background-color: #387bad;
+}
+
+#pageButtons>div:first-child svg {
+    background-color: #387bad;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+#pageButtons>div:last-child {
+    background-color: #387bad;
+}
+
+.pageButton {
+    width: 26px;
+    height: 26px;
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    text-align: center;
+}
+
+#pageButtons>div:hover:not(#pageButtons>div:first-child, #pageButtons>div:last-child) {
+    cursor: pointer;
+    background-color: #d3d3d3;
+}
+
+.pageButtonsSelected {
+    background-color: #387bad !important;
+    color: white !important;
+}
+
+.flechaFiltro {
+    position: absolute;
+    width: 20px;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+}
+
+.flechaFiltro>div {
+    background-image: url("image/encabezado/flecha.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    top: 1px;
+}
+
+.flechaFiltro>div>svg {
+    width: 9px !important;
+    height: 9px !important;
+    position: relative;
+    margin: 0 auto;
+}
+
+.flechaFiltro>div:nth-child(1) {
+    transform: rotate(180deg);
+}
