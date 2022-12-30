@@ -1,7 +1,14 @@
-candres.controller("homeHabilidades", function($scope, carga, $http) {
+candres.controller("homeHabilidades", function($scope, carga, andres, $http) {
     $scope.habilidades = [];
-
-
+    setTimeout(() => {
+        carga.pause();
+        andres.anima('.label,.habilidad__icono,.animation,.habilidad__scuare__progress');
+    }, 200);
+    if (window.innerWidth >= 576 && window.innerWidth < 768) {
+        $scope.take = 8;
+    } else {
+        $scope.take = 6;
+    }
     $scope.habilidades.push({
         iconFill: 'ffffff',
         name: 'HTML',
@@ -117,6 +124,9 @@ candres.controller("homeHabilidades", function($scope, carga, $http) {
     $scope.habilidadPage = 1;
     $scope.habilidadChange = function(numero) {
         $scope.habilidadPage = numero;
+        setTimeout(() => {
+            andres.anima('.label,.habilidad__icono,.animation,.habilidad__scuare__progress');
+        }, 100);
     }
     $scope.habilidades.push({
         iconFill: 'f29200',
@@ -126,16 +136,42 @@ candres.controller("homeHabilidades", function($scope, carga, $http) {
         scuare: 'f29200',
         progress: '40'
     });
-    $scope.numeracion = [];
-    var numeracionL = $scope.habilidades.length / 6;
-    for (var i = 0; i <= numeracionL; i++) {
-        if (i === numeracionL) {
-            if ((numeracionL * 6) - $scope.habilidades.length !== 0)
-                $scope.numeracion.push(i + 1);
 
-        } else {
-            $scope.numeracion.push(i + 1);
+    function numeracionInit() {
+        $scope.numeracion = [];
+        var numeracionL = $scope.habilidades.length / $scope.take;
+        for (var i = 0; i <= numeracionL; i++) {
+            if (i === numeracionL) {
+                if ((numeracionL * $scope.take) - $scope.habilidades.length !== 0)
+                    $scope.numeracion.push(i + 1);
+
+            } else {
+                $scope.numeracion.push(i + 1);
+            }
         }
     }
-    carga.pause();
+    numeracionInit();
+    var time = setTimeout(() => {
+
+    }, 500);
+    $(window).resize(function(e) {
+        e.stopPropagation();
+        //aqui el codigo que se ejecutara cuando se redimencione la ventana
+        $scope.auto = false;
+
+        if (window.innerWidth >= 576 && window.innerWidth < 768) {
+            $scope.take = 8;
+        } else {
+            $scope.take = 6;
+        }
+        clearTimeout(time);
+        time = setTimeout((e) => {
+
+            e.stopPropagation();
+            numeracionInit();
+            $scope.$evalAsync($scope.take);
+            $scope.$evalAsync($scope.habilidadPage);
+            $('.numeracion__numero').eq(0).trigger('click');
+        }, 200, e);
+    })
 });

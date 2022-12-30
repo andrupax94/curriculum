@@ -20,7 +20,7 @@
 
 <body ng-controller="body" class="customS">
     <div id="background"></div>
-    <div class="switch__canvas" ng-click="switchCanvasC()" ng-class="{'switchc__a': switchCanvas===true}" class="switch">
+    <div class="switch__canvas" ng-click="switchCanvasC();auto=false" ng-class="{'switchc__a': switchCanvas===true}" class="switch">
     <div class="switch__circle" ng-class="{'switch__a': switchCanvas===true}"></div>
 </div>
 <canvas id=canvas></canvas>

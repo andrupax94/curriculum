@@ -1,4 +1,4 @@
-candres.controller("homeExperiencia", function($rootScope, $scope, carga, page) {
+candres.controller("homeExperiencia", function($rootScope, $scope, carga, andres, page) {
     $scope.experiencia = [];
     $scope.experiencia.push({
         puesto: 'Tecnico De Informatica',
@@ -20,5 +20,13 @@ candres.controller("homeExperiencia", function($rootScope, $scope, carga, page) 
         funciones: ['Formateo,Instalacion y Configuracion de sistemas operativos Windows', 'Diagnostico y solucion a problemas en equipos informaticos'],
         periodo: 'Ahora',
     });
-    carga.pause();
+    setTimeout(() => {
+        for (let i = 0; i <= $('.experiencia').length; i++) {
+            $('.experiencia').eq(i).css('animation-delay', (0.3 * (i)) + 's');
+            $('.periodo').eq(i).css('animation-delay', (0.3 * (i)) + 0.5 + 's');
+
+        }
+        andres.anima('.experiencia,.periodo');
+        carga.pause();
+    }, 200);
 });

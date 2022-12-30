@@ -784,73 +784,73 @@ progress {
 .col-0-5 {
     -ms-flex: 0 0 4.1666665%;
     flex: 0 0 4.1666665%;
-    max-width: 4.1666665%;
+    width: 4.1666665%;
 }
 
 .col-1-5 {
     -ms-flex: 0 0 12.4999995%;
     flex: 0 0 12.4999995%;
-    max-width: 12.4999995%;
+    width: 12.4999995%;
 }
 
 .col-2-5 {
     -ms-flex: 0 0 20.833333%;
     flex: 0 0 20.833333%;
-    max-width: 20.833333%;
+    width: 20.833333%;
 }
 
 .col-3-5 {
     -ms-flex: 0 0 29.1666665%;
     flex: 0 0 29.1666665%;
-    max-width: 29.1666665%;
+    width: 29.1666665%;
 }
 
 .col-4-5 {
     -ms-flex: 0 0 37.5%;
     flex: 0 0 37.5%;
-    max-width: 37.5%;
+    width: 37.5%;
 }
 
 .col-5-5 {
     -ms-flex: 0 0 45.8333335%;
     flex: 0 0 45.8333335%;
-    max-width: 45.8333335%;
+    width: 45.8333335%;
 }
 
 .col-6-5 {
     -ms-flex: 0 0 54.1666665%;
     flex: 0 0 54.1666665%;
-    max-width: 54.1666665%;
+    width: 54.1666665%;
 }
 
 .col-7-5 {
     -ms-flex: 0 0 62.5%;
     flex: 0 0 62.5%;
-    max-width: 62.5%;
+    width: 62.5%;
 }
 
 .col-8-5 {
     -ms-flex: 0 0 70.8333335%;
     flex: 0 0 70.8333335%;
-    max-width: 70.8333335%;
+    width: 70.8333335%;
 }
 
 .col-9-5 {
     -ms-flex: 0 0 79.166667%;
     flex: 0 0 79.166667%;
-    max-width: 79.166667%;
+    width: 79.166667%;
 }
 
 .col-10-5 {
     -ms-flex: 0 0 87.5000005%;
     flex: 0 0 87.5000005%;
-    max-width: 87.5000005%;
+    width: 87.5000005%;
 }
 
 .col-11-5 {
     -ms-flex: 0 0 95.8333335%;
     flex: 0 0 95.8333335%;
-    max-width: 95.8333335%;
+    width: 95.8333335%;
 }
 
 .col-1 {
@@ -1056,67 +1056,67 @@ progress {
     .col-sm-0-5 {
         -ms-flex: 0 0 4.1666665%;
         flex: 0 0 4.1666665%;
-        max-width: 4.1666665%;
+        width: 4.1666665%;
     }
     .col-sm-0-5 {
         -ms-flex: 0 0 4.1666665%;
         flex: 0 0 4.1666665%;
-        max-width: 4.1666665%;
+        width: 4.1666665%;
     }
     .col-sm-1-5 {
         -ms-flex: 0 0 12.4999995%;
         flex: 0 0 12.4999995%;
-        max-width: 12.4999995%;
+        width: 12.4999995%;
     }
     .col-sm-2-5 {
         -ms-flex: 0 0 20.833333%;
         flex: 0 0 20.833333%;
-        max-width: 20.833333%;
+        width: 20.833333%;
     }
     .col-sm-3-5 {
         -ms-flex: 0 0 29.1666665%;
         flex: 0 0 29.1666665%;
-        max-width: 29.1666665%;
+        width: 29.1666665%;
     }
     .col-sm-4-5 {
         -ms-flex: 0 0 37.5%;
         flex: 0 0 37.5%;
-        max-width: 37.5%;
+        width: 37.5%;
     }
     .col-sm-5-5 {
         -ms-flex: 0 0 45.8333335%;
         flex: 0 0 45.8333335%;
-        max-width: 45.8333335%;
+        width: 45.8333335%;
     }
     .col-sm-6-5 {
         -ms-flex: 0 0 54.1666665%;
         flex: 0 0 54.1666665%;
-        max-width: 54.1666665%;
+        width: 54.1666665%;
     }
     .col-sm-7-5 {
         -ms-flex: 0 0 62.5%;
         flex: 0 0 62.5%;
-        max-width: 62.5%;
+        width: 62.5%;
     }
     .col-sm-8-5 {
         -ms-flex: 0 0 70.8333335%;
         flex: 0 0 70.8333335%;
-        max-width: 70.8333335%;
+        width: 70.8333335%;
     }
     .col-sm-9-5 {
         -ms-flex: 0 0 79.166667%;
         flex: 0 0 79.166667%;
-        max-width: 79.166667%;
+        width: 79.166667%;
     }
     .col-sm-10-5 {
         -ms-flex: 0 0 87.5000005%;
         flex: 0 0 87.5000005%;
-        max-width: 87.5000005%;
+        width: 87.5000005%;
     }
     .col-sm-11-5 {
         -ms-flex: 0 0 95.8333335%;
         flex: 0 0 95.8333335%;
-        max-width: 95.8333335%;
+        width: 95.8333335%;
     }
     .col-sm-1 {
         flex: 0 0 auto;
@@ -1291,62 +1291,62 @@ progress {
     .col-md-0-5 {
         -ms-flex: 0 0 4.1666665%;
         flex: 0 0 4.1666665%;
-        max-width: 4.1666665%;
+        width: 4.1666665%;
     }
     .col-md-1-5 {
         -ms-flex: 0 0 12.4999995%;
         flex: 0 0 12.4999995%;
-        max-width: 12.4999995%;
+        width: 12.4999995%;
     }
     .col-md-2-5 {
         -ms-flex: 0 0 20.833333%;
         flex: 0 0 20.833333%;
-        max-width: 20.833333%;
+        width: 20.833333%;
     }
     .col-md-3-5 {
         -ms-flex: 0 0 29.1666665%;
         flex: 0 0 29.1666665%;
-        max-width: 29.1666665%;
+        width: 29.1666665%;
     }
     .col-md-4-5 {
         -ms-flex: 0 0 37.5%;
         flex: 0 0 37.5%;
-        max-width: 37.5%;
+        width: 37.5%;
     }
     .col-md-5-5 {
         -ms-flex: 0 0 45.8333335%;
         flex: 0 0 45.8333335%;
-        max-width: 45.8333335%;
+        width: 45.8333335%;
     }
     .col-md-6-5 {
         -ms-flex: 0 0 54.1666665%;
         flex: 0 0 54.1666665%;
-        max-width: 54.1666665%;
+        width: 54.1666665%;
     }
     .col-md-7-5 {
         -ms-flex: 0 0 62.5%;
         flex: 0 0 62.5%;
-        max-width: 62.5%;
+        width: 62.5%;
     }
     .col-md-8-5 {
         -ms-flex: 0 0 70.8333335%;
         flex: 0 0 70.8333335%;
-        max-width: 70.8333335%;
+        width: 70.8333335%;
     }
     .col-md-9-5 {
         -ms-flex: 0 0 79.166667%;
         flex: 0 0 79.166667%;
-        max-width: 79.166667%;
+        width: 79.166667%;
     }
     .col-md-10-5 {
         -ms-flex: 0 0 87.5000005%;
         flex: 0 0 87.5000005%;
-        max-width: 87.5000005%;
+        width: 87.5000005%;
     }
     .col-md-11-5 {
         -ms-flex: 0 0 95.8333335%;
         flex: 0 0 95.8333335%;
-        max-width: 95.8333335%;
+        width: 95.8333335%;
     }
     .col-md-1 {
         flex: 0 0 auto;
@@ -1521,62 +1521,62 @@ progress {
     .col-lg-0-5 {
         -ms-flex: 0 0 4.1666665%;
         flex: 0 0 4.1666665%;
-        max-width: 4.1666665%;
+        width: 4.1666665%;
     }
     .col-lg-1-5 {
         -ms-flex: 0 0 12.4999995%;
         flex: 0 0 12.4999995%;
-        max-width: 12.4999995%;
+        width: 12.4999995%;
     }
     .col-lg-2-5 {
         -ms-flex: 0 0 20.833333%;
         flex: 0 0 20.833333%;
-        max-width: 20.833333%;
+        width: 20.833333%;
     }
     .col-lg-3-5 {
         -ms-flex: 0 0 29.1666665%;
         flex: 0 0 29.1666665%;
-        max-width: 29.1666665%;
+        width: 29.1666665%;
     }
     .col-lg-4-5 {
         -ms-flex: 0 0 37.5%;
         flex: 0 0 37.5%;
-        max-width: 37.5%;
+        width: 37.5%;
     }
     .col-lg-5-5 {
         -ms-flex: 0 0 45.8333335%;
         flex: 0 0 45.8333335%;
-        max-width: 45.8333335%;
+        width: 45.8333335%;
     }
     .col-lg-6-5 {
         -ms-flex: 0 0 54.1666665%;
         flex: 0 0 54.1666665%;
-        max-width: 54.1666665%;
+        width: 54.1666665%;
     }
     .col-lg-7-5 {
         -ms-flex: 0 0 62.5%;
         flex: 0 0 62.5%;
-        max-width: 62.5%;
+        width: 62.5%;
     }
     .col-lg-8-5 {
         -ms-flex: 0 0 70.8333335%;
         flex: 0 0 70.8333335%;
-        max-width: 70.8333335%;
+        width: 70.8333335%;
     }
     .col-lg-9-5 {
         -ms-flex: 0 0 79.166667%;
         flex: 0 0 79.166667%;
-        max-width: 79.166667%;
+        width: 79.166667%;
     }
     .col-lg-10-5 {
         -ms-flex: 0 0 87.5000005%;
         flex: 0 0 87.5000005%;
-        max-width: 87.5000005%;
+        width: 87.5000005%;
     }
     .col-lg-11-5 {
         -ms-flex: 0 0 95.8333335%;
         flex: 0 0 95.8333335%;
-        max-width: 95.8333335%;
+        width: 95.8333335%;
     }
     .col-lg-1 {
         flex: 0 0 auto;
@@ -1751,62 +1751,62 @@ progress {
     .col-xl-0-5 {
         -ms-flex: 0 0 4.1666665%;
         flex: 0 0 4.1666665%;
-        max-width: 4.1666665%;
+        width: 4.1666665%;
     }
     .col-xl-1-5 {
         -ms-flex: 0 0 12.4999995%;
         flex: 0 0 12.4999995%;
-        max-width: 12.4999995%;
+        width: 12.4999995%;
     }
     .col-xl-2-5 {
         -ms-flex: 0 0 20.833333%;
         flex: 0 0 20.833333%;
-        max-width: 20.833333%;
+        width: 20.833333%;
     }
     .col-xl-3-5 {
         -ms-flex: 0 0 29.1666665%;
         flex: 0 0 29.1666665%;
-        max-width: 29.1666665%;
+        width: 29.1666665%;
     }
     .col-xl-4-5 {
         -ms-flex: 0 0 37.5%;
         flex: 0 0 37.5%;
-        max-width: 37.5%;
+        width: 37.5%;
     }
     .col-xl-5-5 {
         -ms-flex: 0 0 45.8333335%;
         flex: 0 0 45.8333335%;
-        max-width: 45.8333335%;
+        width: 45.8333335%;
     }
     .col-xl-6-5 {
         -ms-flex: 0 0 54.1666665%;
         flex: 0 0 54.1666665%;
-        max-width: 54.1666665%;
+        width: 54.1666665%;
     }
     .col-xl-7-5 {
         -ms-flex: 0 0 62.5%;
         flex: 0 0 62.5%;
-        max-width: 62.5%;
+        width: 62.5%;
     }
     .col-xl-8-5 {
         -ms-flex: 0 0 70.8333335%;
         flex: 0 0 70.8333335%;
-        max-width: 70.8333335%;
+        width: 70.8333335%;
     }
     .col-xl-9-5 {
         -ms-flex: 0 0 79.166667%;
         flex: 0 0 79.166667%;
-        max-width: 79.166667%;
+        width: 79.166667%;
     }
     .col-xl-10-5 {
         -ms-flex: 0 0 87.5000005%;
         flex: 0 0 87.5000005%;
-        max-width: 87.5000005%;
+        width: 87.5000005%;
     }
     .col-xl-11-5 {
         -ms-flex: 0 0 95.8333335%;
         flex: 0 0 95.8333335%;
-        max-width: 95.8333335%;
+        width: 95.8333335%;
     }
     .col-xl-1 {
         flex: 0 0 auto;

@@ -29,13 +29,13 @@
     </div>
 </div>
     <div id="mid" class="col-12 row">
-        <div class="col-3 column menu__container">
-            <a href="/personales" ng-click="page='personales'" class="col-12 menu__buttom" ng-class="{'menu__buttom__activo': page==='personales'}"><span getsvg="image/personal.svg,#FFFFFF"></span><h5>Personales</h5></a>
-            <a href="/habilidades" ng-click="page='habilidades'" class="col-12 menu__buttom" ng-class="{'menu__buttom__activo': page==='habilidades'}"><span getsvg="image/habilidades.svg,#FFFFFF"></span><h5>Habilidades</h5></a>
-            <a href="/formacion" ng-click="page='formacion'" class="col-12 menu__buttom" ng-class="{'menu__buttom__activo': page==='formacion'}"><span getsvg="image/formacion.svg,#FFFFFF"></span><h5>Formacion Academica</h5></a>
-            <a href="/experiencia" ng-click="page='experiencia'" class="col-12 menu__buttom" ng-class="{'menu__buttom__activo': page==='experiencia'}"><span getsvg="image/experiencia.svg,#FFFFFF"></span><h5>Experiencia Laboral</h5></a>
+        <div class="col-12 col-sm-12 col-md-3 order-1 order-md-0 column menu__container">
+            <a ng-click="cambiaPage('personales')" class="col-3 col-sm-6 col-md-12 menu__buttom" ng-class="{'menu__buttom__activo': page==='personales'}"><span getsvg="image/personal.svg,#FFFFFF"></span><h5>Personales</h5></a>
+            <a ng-click="cambiaPage('habilidades')" class="col-3 col-sm-6 col-md-12 menu__buttom" ng-class="{'menu__buttom__activo': page==='habilidades'}"><span getsvg="image/habilidades.svg,#FFFFFF"></span><h5>Habilidades</h5></a>
+            <a ng-click="cambiaPage('formacion')" class="col-3 col-sm-6 col-md-12 menu__buttom" ng-class="{'menu__buttom__activo': page==='formacion'}"><span getsvg="image/formacion.svg,#FFFFFF"></span><h5>Formacion Academica</h5></a>
+            <a ng-click="cambiaPage('experiencia')" class="col-3 col-sm-6 col-md-12 menu__buttom" ng-class="{'menu__buttom__activo': page==='experiencia'}"><span getsvg="image/experiencia.svg,#FFFFFF"></span><h5>Experiencia Laboral</h5></a>
         </div>
-        <div id="pestañaPrincipal" class="col-9 row">
+        <div id="pestañaPrincipal" class="col-12 col-sm-9 row order-0 order-md-1">
         <div ng-view class="customS"></div>
         </div>
     </div>

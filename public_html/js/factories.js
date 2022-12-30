@@ -146,12 +146,17 @@ candres.factory("carga", function($window) {
             paused: true
         });
         element.children('*').css('visibility', 'visible');
+        if (opacity !== true && opacity !== false && opacity !== undefined) {
+            element.children('.carga').css('background-color', opacity);
+        } else if (opacity === undefined) {
+            element.children('.carga').css('background-color', element.css('background-color'));
 
+
+        }
         setTimeout(() => {
             element.children('.carga').css('border-radius', element.css('border-radius'));
-            if (opacity) {
-                element.children('.carga').css('background-color', '#ffffff80');
-
+            if (opacity === true) {
+                element.children('.carga').css('background-color', 'transparent');
             }
             var cargaButton = element.find('.cargaButton').eq(0);
             cargaButton.click(function(e) {
@@ -581,6 +586,9 @@ candres.factory('andres', function($rootScope, $http, $q, $filter, $window) {
             $('[validar]').trigger('focusout');
         }, 1000);
 
+    }
+    funciones.anima = function(anima) {
+        $(anima).css('animation-play-state', 'running');
     }
     funciones.randomChar = function(length, characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789') {
         var result = '';

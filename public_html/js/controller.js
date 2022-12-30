@@ -12,6 +12,7 @@ candres.controller("body", function($scope, carga, modales, popUp, andres, mensa
     $scope.cancelPropagation = function(e) {
         e.stopPropagation();
     }
+    $scope.auto = true;
     carga.to($('body'), 'big');
     var canvas,
         ctx;
@@ -36,7 +37,8 @@ candres.controller("body", function($scope, carga, modales, popUp, andres, mensa
     var sw;
     var text;
     var timeO;
-    $scope.switchCanvas = true;
+
+    $scope.switchCanvas = false;
     $scope.switchCanvasC = function() {
         $scope.switchCanvas = !$scope.switchCanvas;
         if ($scope.switchCanvas) {
@@ -51,7 +53,8 @@ candres.controller("body", function($scope, carga, modales, popUp, andres, mensa
         }
     }
     canvasInit();
-    $scope.switchCanvasC();
+    //$scope.switchCanvasC();
+
 
     function canvasInit() {
         canvas = document.querySelector('canvas');
@@ -171,7 +174,41 @@ candres.controller("body", function($scope, carga, modales, popUp, andres, mensa
         }
     }
 
+    setTimeout(() => {
+        if ($scope.switchCanvas === false) {
+            $scope.switchCanvasC();
+            $scope.$evalAsync($scope.switchCanvas);
 
+            setTimeout(() => {
+                if ($scope.auto === true) {
+                    $scope.switchCanvasC();
+                    $scope.$evalAsync($scope.switchCanvas);
+                }
+            }, 3000);
+        }
+    }, 2000);
+
+    var time = setTimeout(() => {
+
+    }, 500);
+    $(window).resize(function(e) {
+        e.stopPropagation();
+        //aqui el codigo que se ejecutara cuando se redimencione la ventana
+        $scope.auto = false;
+
+        if ($scope.switchCanvas === true) {
+            clearTimeout(time);
+            time = setTimeout((e) => {
+                e.stopPropagation();
+                $scope.switchCanvasC();
+                $scope.$evalAsync($scope.switchCanvas);
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }, 500, e);
+        } else {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        }
+    })
     carga.play();
 
 });

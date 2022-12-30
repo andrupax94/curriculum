@@ -1,6 +1,6 @@
 div#descripcion>p {
     font-family: Century Gothic;
-    font-size: 10px;
+    font-size: 12px;
     text-align: justify;
     text-indent: 12px;
 }
@@ -70,4 +70,103 @@ div#descripcion {
 div#adicionales {
     justify-content: space-between;
     margin-top: 10px !important;
+}
+
+.label {
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+
+#descripcion>p {
+    opacity: 0;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-name: apareceY;
+    animation-play-state: paused;
+}
+
+#descripcion>p:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+#descripcion>p:nth-child(2) {
+    animation-delay: 1s;
+}
+
+#adicionales>.adicionales {
+    opacity: 0;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+    animation-name: apareceY;
+}
+
+#adicionales>.adicionales:nth-child(1) {
+    animation-delay: 1.5s;
+}
+
+#adicionales>.adicionales:nth-child(2) {
+    animation-delay: 1.6s;
+}
+
+#adicionales>.adicionales:nth-child(3) {
+    animation-delay: 1.7s;
+}
+
+#adicionales>.adicionales:nth-child(4) {
+    animation-delay: 1.8s;
+}
+
+@keyframes apareceX {
+    0% {
+        opacity: 0;
+        transform: translateX(-10%);
+        -webkit-transform: translateX(-10%);
+        -moz-transform: translateX(-10%);
+        -ms-transform: translateX(-10%);
+        -o-transform: translateX(-10%);
+    }
+    100% {
+        opacity: 1 !important;
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+    }
+}
+
+@keyframes apareceY {
+    0% {
+        opacity: 0;
+        transform: translateY(-10%);
+        -webkit-transform: translateY(-10%);
+        -moz-transform: translateY(-10%);
+        -ms-transform: translateY(-10%);
+        -o-transform: translateY(-10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+        -moz-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        -o-transform: translateY(0%);
+    }
+}
+
+@media (max-width: 576px) {
+    #descripcion>p {
+        font-size: 14px !important;
+    }
+    .adicionales {
+        font-size: 12px;
+    }
+    .adicionales h5 {
+        font-size: 13px;
+    }
 }

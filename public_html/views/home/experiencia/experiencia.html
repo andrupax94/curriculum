@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="experiencia__container col-12 row">
-        <div class="experiencia" ng-repeat="ex in experiencia track by $index">
+        <div class="experiencia animation" ng-repeat="ex in experiencia track by $index">
             <div class="experiencia_bg">
                 <div class="experiencia__header">[[ex.puesto]]</div>
                 <p class="experiencia__empresa"><b>Empresa:</b>[[ex.empresa]]</p>
@@ -17,8 +17,9 @@
                         <li ng-repeat="funcion in ex.funciones track by $index">[[funcion]]</li>
                     </ul>
                 </p>
+                <div class="periodoSm d-block d-sm-none">Periodo: [[ex.periodo]]</div>
             </div>
-            <div class="periodo">[[ex.periodo]]</div>
+            <div class="animation periodo d-none d-sm-flex">[[ex.periodo]]</div>
         </div>
     </div>
 </div>

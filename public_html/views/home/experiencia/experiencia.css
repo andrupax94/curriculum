@@ -5,6 +5,8 @@
     position: relative;
 }
 
+div#pestañaPrincipal>div {}
+
 .experiencia_bg {
     position: relative;
     background-color: #d1d1d1;
@@ -83,4 +85,113 @@ p.experiencia__funciones {
 
 .experiencia:last-child {
     margin-bottom: 10px;
+}
+
+.experiencia {
+    opacity: 0;
+    animation-duration: 0.5s;
+}
+
+.periodo {
+    animation-duration: 0.5s;
+}
+
+.experiencia:nth-child(2n+1) {
+    animation-name: apareceX1;
+}
+
+.experiencia:nth-child(2n) {
+    animation-name: apareceX2;
+}
+
+.experiencia:nth-child(2n+1) .periodo {
+    transform: translateX(-100%);
+    animation-name: apareceX1;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+}
+
+.experiencia:nth-child(2n) .periodo {
+    transform: translateX(100%);
+    animation-name: apareceX2;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+}
+
+@keyframes apareceX1 {
+    0% {
+        opacity: 0;
+        transform: translateX(-20%);
+        -webkit-transform: translateX(-20%);
+        -moz-transform: translateX(-20%);
+        -ms-transform: translateX(-20%);
+        -o-transform: translateX(-20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+    }
+}
+
+@keyframes apareceX2 {
+    0% {
+        opacity: 0;
+        transform: translateX(20%);
+        -webkit-transform: translateX(20%);
+        -moz-transform: translateX(20%);
+        -ms-transform: translateX(20%);
+        -o-transform: translateX(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        -o-transform: translateX(0%);
+    }
+}
+
+.periodoSm {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background-color: #b9b9b9;
+    color: black;
+    bottom: 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+@media (max-width: 576px) {
+    .experiencia {}
+    .experiencia__container {
+        margin-top: -90px !important;
+    }
+    .experiencia_bg {}
+    .experiencia_bg p,
+    .experiencia_bg li {
+        font-size: 12px;
+    }
+    .experiencia__header {
+        height: 30px;
+        font-size: 14px;
+    }
+    p.experiencia__empresa.ng-binding {}
+    .experiencia_bg {}
+}
+
+.experiencia__container {
+    padding: 0;
+    position: relative;
+    margin: 0 auto;
 }

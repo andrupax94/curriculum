@@ -11,7 +11,7 @@
         margin: 0 auto;
         padding: 0;
         margin-top: 5px;
-        min-height: 354px;
+        min-height: 376px;
         overflow: hidden;
     }
     
@@ -39,7 +39,7 @@
         text-decoration: none;
         cursor: pointer;
         font-weight: 100;
-        height: 85px;
+        height: 90px;
         background: rgba(0, 0, 0, 0.41);
         color: white;
         font-family: Century Gothic;
@@ -108,6 +108,7 @@
         background-image: url(../../image/fotoandres.png);
         background-size: contain;
         background-repeat: no-repeat;
+        background-position: c;
     }
     
     div#encabezado__titulos {
@@ -129,17 +130,19 @@
     }
     
     div#pestañaPrincipal>div {
-        position: relative;
-        background-color: #d4e8f4;
-        padding: 0;
-        overflow-y: scroll;
-        max-height: 354px;
+        position: absolute;
+        padding: 0 !important;
+        margin: 0 !important;
+        height: 100%;
     }
     
     div#pestañaPrincipal {
         position: relative;
         margin: 0 auto;
-        padding: 0px 0px 0px 6px;
+        background-color: #d4e8f4 !important;
+        width: 73.5%;
+        opacity: 1 !important;
+        padding: 0;
     }
     
     .label {
@@ -150,6 +153,7 @@
         overflow: hidden;
         margin-top: 10px;
         padding: 0;
+        animation-name: apareceX;
     }
     
     .label__icon {
@@ -195,6 +199,11 @@
     
     div#pestañaPrincipal .container {
         margin: 0 auto;
+        position: relative;
+        padding: 0 23px !important;
+        max-width: unset;
+        margin-bottom: 10px;
+        height: 100%;
     }
     
     .label__rightScuare>h5 {
@@ -208,4 +217,30 @@
         font-size: 17px;
         font-weight: bold;
         justify-content: center;
+    }
+    
+    @media (max-width: 768px) {
+        .menu__container {
+            flex-direction: row;
+            flex-wrap: wrap;
+            margin: 0 auto;
+            margin-top: 6px;
+        }
+        #pestañaPrincipal {
+            width: 100% !important;
+            height: 60vh;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .menu__buttom>h5 {
+            display: none;
+        }
+        #pestañaPrincipal {
+            height: 70vh;
+        }
+    }
+    
+    .switch__canvas:hover {
+        opacity: 1;
     }

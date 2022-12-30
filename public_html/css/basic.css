@@ -26,6 +26,10 @@ html {
     overflow: hidden;
 }
 
+.customS {
+    overflow-y: scroll;
+}
+
 body {
     font-family: 'Quicksand';
     --fontsizeIT: 18px;
@@ -320,7 +324,7 @@ select>option {
 }
 
 #container {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     max-width: 824px;
     margin: 0 auto;
@@ -328,6 +332,7 @@ select>option {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 10px;
     z-index: 2;
 }
 
@@ -790,7 +795,7 @@ div#mensajes {
     top: 0 !important;
     position: absolute !important;
     left: 0 !important;
-    background-color: white;
+    background-color: transparent;
     display: flex;
     flex-direction: column !important;
     justify-content: center !important;
@@ -1211,6 +1216,12 @@ canvas#canvas {
     z-index: 1;
 }
 
+.animation {
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+
 .switch__canvas {
     z-index: 100;
     transition: linear 0.2s background-color;
@@ -1223,6 +1234,7 @@ canvas#canvas {
     left: 19px;
     height: 35px;
     width: 67px;
+    opacity: 0.5;
     box-shadow: 1px 1px 5px -1px black;
     border-radius: 25px;
     -webkit-border-radius: 25px;
@@ -1230,7 +1242,8 @@ canvas#canvas {
     -ms-border-radius: 25px;
     -o-border-radius: 25px;
     background-color: white;
-    -webkit-transition: linear 0.2s background-color;
+    -webkit-transition: linear 0.2s;
+    transition-property: background-color, opacity;
     -moz-transition: linear 0.2s background-color;
     -ms-transition: linear 0.2s background-color;
     -o-transition: linear 0.2s background-color;

@@ -1,4 +1,4 @@
-candres.controller("homeFormacion", function($rootScope, $scope, carga, page) {
+candres.controller("homeFormacion", function($rootScope, $scope, carga, andres, page) {
     $scope.formaciones = [];
     $scope.formaciones.push({
         bColor: '4691db',
@@ -28,5 +28,12 @@ candres.controller("homeFormacion", function($rootScope, $scope, carga, page) {
         image: 'akacenter',
         inst: 'Akacenter Tenerife/ Certiport',
     });
-    carga.pause();
+    setTimeout(() => {
+        for (let i = 0; i <= $('.formaciones').length; i++) {
+            $('.formaciones').eq(i).css('animation-delay', 0.3 * i + 's');
+
+        }
+        andres.anima('.formaciones');
+        carga.pause();
+    }, 200);
 });
