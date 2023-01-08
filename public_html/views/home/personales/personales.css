@@ -70,6 +70,7 @@ div#descripcion {
 div#adicionales {
     justify-content: space-between;
     margin-top: 10px !important;
+    margin-bottom: 10px !important;
 }
 
 .label {

@@ -1,0 +1,2 @@
+barra en mozilla le faltan stilofa-spin
+experiencia no se visualiza bien en movil

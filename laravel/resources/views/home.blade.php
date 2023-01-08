@@ -18,7 +18,7 @@
 @section('contend')
 
 
-<main ng-controller="home" class="col-12" id="container" class="flexc">
+<main ng-controller="home" class="col-12" class="flexc">
 
 <div id="container">
 <div id="encabezado" class="col-12 row">

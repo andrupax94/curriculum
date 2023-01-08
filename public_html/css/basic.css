@@ -324,16 +324,17 @@ select>option {
 }
 
 #container {
-    min-height: 100%;
     width: 100%;
+    height: 100%;
     max-width: 824px;
+    max-height: 460px;
     margin: 0 auto;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-bottom: 10px;
     z-index: 2;
+    position: relative;
 }
 
 movilFooter {
@@ -1282,4 +1283,37 @@ canvas#canvas {
     display: flex;
     flex-direction: column;
     padding: 0;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: inherit;
+}
+
+@media (max-width: 576px) {
+    main {
+        height: calc(100% - 90px);
+        margin-top: 0px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #container {
+        max-height: inherit;
+        position: relative;
+        padding: 0 !important;
+        margin: 0 !important;
+        justify-content: start;
+    }
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-height: inherit;
+    }
 }

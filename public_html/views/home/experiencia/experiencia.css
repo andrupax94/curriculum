@@ -5,7 +5,7 @@
     position: relative;
 }
 
-div#pestañaPrincipal>div {}
+div#pestaÃ±aPrincipal>div {}
 
 .experiencia_bg {
     position: relative;
@@ -90,6 +90,9 @@ p.experiencia__funciones {
 .experiencia {
     opacity: 0;
     animation-duration: 0.5s;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .periodo {
@@ -166,32 +169,48 @@ p.experiencia__funciones {
     height: 20px;
     background-color: #b9b9b9;
     color: black;
-    bottom: 0;
+    bottom: -8px;
     text-align: center;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: bold;
+    flex-direction: column;
+    justify-content: center;
 }
 
 @media (max-width: 576px) {
-    .experiencia {}
-    .experiencia__container {
-        margin-top: -90px !important;
+    .experiencia {
+        width: 100%;
     }
-    .experiencia_bg {}
+    .experiencia__container {}
+    .experiencia_bg {
+        width: 100%;
+    }
     .experiencia_bg p,
     .experiencia_bg li {
-        font-size: 12px;
+        font-size: 10px;
     }
     .experiencia__header {
         height: 30px;
         font-size: 14px;
     }
     p.experiencia__empresa.ng-binding {}
-    .experiencia_bg {}
+    .experiencia_bg {
+        margin-bottom: 10px;
+    }
 }
 
 .experiencia__container {
     padding: 0;
     position: relative;
     margin: 0 auto;
+}
+
+div#pestañaPrincipal .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: start;
+    height: calc(100% + 10px) !important;
+    min-height: inherit;
+    /* margin-bottom: 10px !important; */
 }
