@@ -97,6 +97,10 @@ div#adicionales {
     animation-delay: 1s;
 }
 
+#descripcion>p:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
 #adicionales>.adicionales {
     opacity: 0;
     animation-duration: 0.5s;
