@@ -1,39 +1,57 @@
 candres.controller("homeFormacion", function($rootScope, $scope, carga, andres, page) {
-    $scope.formaciones = [];
-    $scope.formaciones.push({
-        bColor: '4691db',
-        titulo: 'Ing. De Sistemas',
-        headerColor: '3369aa',
-        image: 'mariño',
-        inst: 'I.U.P. Santiago Mariño',
-    });
-    $scope.formaciones.push({
-        bColor: 'f29200',
-        titulo: 'Adobe Illustrator Basic',
-        headerColor: '995c00',
-        image: 'drgraphic',
-        inst: 'Dr. Graphic',
-    });
-    $scope.formaciones.push({
-        bColor: '3cbce7',
-        titulo: 'Azure AZ-900',
-        headerColor: '0baae2',
-        image: 'akacenter',
-        inst: 'Akacenter Tenerife/ CertiPort/ Microsoft',
-    });
-    $scope.formaciones.push({
-        bColor: '882fa5',
-        titulo: 'Bases De Datos',
-        headerColor: '68217a',
-        image: 'akacenter',
-        inst: 'Akacenter Tenerife/ Certiport',
-    });
-    setTimeout(() => {
-        for (let i = 0; i <= $('.formaciones').length; i++) {
-            $('.formaciones').eq(i).css('animation-delay', 0.3 * i + 's');
+   $scope.formaciones = [];
+   $scope.formaciones.push({
+      bColor: '4691db',
+      titulo: 'Ing. De Sistemas',
+      headerColor: '3369aa',
+      image: 'mariño',
+      inst: 'I.U.P. Santiago Mariño',
+   });
+   $scope.formaciones.push({
+      bColor: 'f29200',
+      titulo: 'Adobe Illustrator Basic',
+      headerColor: '995c00',
+      image: 'drgraphic',
+      inst: 'Dr. Graphic',
+   });
+   $scope.formaciones.push({
+      bColor: '3cbce7',
+      titulo: 'Azure AZ-900',
+      headerColor: '0baae2',
+      image: 'akacenter',
+      inst: 'Akacenter Tenerife/ CertiPort/ Microsoft',
+   });
+   $scope.formaciones.push({
+      bColor: '882fa5',
+      titulo: 'Bases De Datos',
+      headerColor: '68217a',
+      image: 'akacenter',
+      inst: 'Akacenter Tenerife/ Certiport',
+   });
+   $scope.titulo = true;
+   $scope.formacionClick = function(valor) {
+      $scope.titulo = true;
+      switch (valor) {
+         case '0':
 
-        }
-        andres.anima('.formaciones');
-        carga.pause();
-    }, 200);
+            break;
+         case '1':
+
+            break;
+         case '2':
+
+            break;
+         case '3':
+
+            break;
+      }
+   }
+   setTimeout(() => {
+      for (let i = 0; i <= $('.formaciones').length; i++) {
+         $('.formaciones').eq(i).css('animation-delay', 0.3 * i + 's');
+
+      }
+      andres.anima('.formaciones');
+      carga.pause();
+   }, 200);
 });
