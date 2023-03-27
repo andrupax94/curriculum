@@ -30,6 +30,14 @@ html {
     overflow-y: scroll;
 }
 
+.animationS {
+    animation-play-state: running !important;
+}
+
+.animationR {
+    animation-direction: reverse !important;
+}
+
 body {
     font-family: 'Quicksand';
     --fontsizeIT: 18px;
@@ -1218,6 +1226,7 @@ canvas#canvas {
 }
 
 .animation {
+    animation-duration: 0.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-play-state: paused;

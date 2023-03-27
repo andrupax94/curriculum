@@ -587,7 +587,21 @@ candres.factory('andres', function($rootScope, $http, $q, $filter, $window) {
         }, 1000);
 
     }
-    funciones.anima = function(anima) {
+    funciones.anima = function(anima, reverse = false) {
+
+        var animations = $(anima).attr('animation');
+        if (animations !== undefined) {
+            var aux = $(anima).attr('animation').split(',');
+        } else {
+            var aux = [];
+            aux[0] = $(anima).css('animation-name');
+        }
+        $(anima).css('animation-play-state', 'paused');
+        if (reverse !== false) {
+            $(anima).css('animation-name', aux[1]);
+        } else {
+            $(anima).css('animation-name', aux[0]);
+        }
         $(anima).css('animation-play-state', 'running');
     }
     funciones.randomChar = function(length, characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789') {
