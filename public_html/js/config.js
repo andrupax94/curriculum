@@ -1,50 +1,68 @@
+function verificaLang(route, $rootScope) {
+   var ln = navigator.language || navigator.userLanguage;
+   /*Validar que no se encuentre en la pagina correspondiente a su idioma*/
+   let pagActual = window.location.pathname;
+
+   if (route.current.params.lang !== 'gb') {
+      var ln = route.current.params.lang;
+   }
+   if (ln.indexOf('en') !== -1) {
+      $rootScope.lang = 'en-EN';
+   } else if (ln.indexOf('es') !== -1) {
+      $rootScope.lang = 'es-ES';
+   } else {
+      route.current.params.lang = 'es-ES';
+      $rootScope.lang = 'es-ES';
+   }
+
+   $('html').attr('lang', $rootScope.lang);
+
+}
 candres.config(function($routeProvider) {
 
-    $routeProvider.when("/personales", {
-        templateUrl: "views/home/personales/personales.html",
-        controller: "homePersonales",
-        resolve: {
-            page: function(page) {
-                page.asigna('personales');
-            }
-        }
-    });
-    $routeProvider.when("/", {
-        templateUrl: "views/home/personales/personales.html",
-        controller: "homePersonales",
-        resolve: {
-            page: function(page) {
-                page.asigna('personales');
-            }
-        }
-    });
-    $routeProvider.when("/habilidades", {
-        templateUrl: "views/home/habilidades/habilidades.html",
-        controller: "homeHabilidades",
-        resolve: {
-            page: function(page) {
-                page.asigna('habilidades');
-            }
-        }
-    });
-    $routeProvider.when("/experiencia", {
-        templateUrl: "views/home/experiencia/experiencia.html",
-        controller: "homeExperiencia",
-        resolve: {
-            page: function(page) {
-                page.asigna('experiencia');
-            }
-        }
-    });
-    $routeProvider.when("/formacion", {
-        templateUrl: "views/home/formacion/formacion.html",
-        controller: "homeFormacion",
-        resolve: {
-            page: function(page) {
-                page.asigna('formacion');
-            }
-        }
-    });
+   $routeProvider.when("/:lang/personales", {
+      templateUrl: "views/home/personales/personales.html",
+      controller: "homePersonales",
+      resolve: {
+         page: function(page, $route, $rootScope) {
+            verificaLang($route, $rootScope);
+            page.asigna('personales');
+         }
+      }
+   });
+
+   $routeProvider.when("/:lang/habilidades", {
+      templateUrl: "views/home/habilidades/habilidades.html",
+      controller: "homeHabilidades",
+      resolve: {
+         page: function(page, $route, $rootScope) {
+            verificaLang($route, $rootScope);
+            page.asigna('habilidades');
+         }
+      }
+   });
+   $routeProvider.when("/:lang/experiencia/", {
+      templateUrl: "views/home/experiencia/experiencia.html",
+      controller: "homeExperiencia",
+      resolve: {
+         page: function(page, $route, $rootScope) {
+            verificaLang($route, $rootScope);
+            page.asigna('habilidades');
+         }
+      }
+   });
+   $routeProvider.when("/:lang/formacion", {
+      templateUrl: "views/home/formacion/formacion.html",
+      controller: "homeFormacion",
+      resolve: {
+         page: function(page, $route, $rootScope) {
+            verificaLang($route, $rootScope);
+            page.asigna('habilidades');
+         }
+      }
+   }).otherwise({
+      redirectTo: 'gb/personales',
+   });
 
 
 

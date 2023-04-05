@@ -1,7 +1,7 @@
-candres.controller("homePersonales", function($scope, carga, page) {
-
-    setTimeout(() => {
-        carga.pause();
-        $('.label,#descripcion>p,.adicionales').css('animation-play-state', 'running');
-    }, 200);
+candres.controller("homePersonales", function($scope, $routeParams, $rootScope, carga, page) {
+   $scope.lang = $rootScope.lang;
+   setTimeout(() => {
+      carga.pause();
+      $('.label,#descripcion>p,.adicionales').css('animation-play-state', 'running');
+   }, 200);
 });

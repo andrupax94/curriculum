@@ -227,6 +227,15 @@
     }
     
     @media (max-width: 768px) {
+        #encabezado__titulo {
+            font-size: 28px !important;
+        }
+        #encabezado__foto {
+            height: 83px !important;
+        }
+        #encabezado {
+            height: 83px !important;
+        }
         .menu__container {
             flex-direction: row;
             flex-wrap: wrap;
@@ -241,7 +250,7 @@
             height: calc(100% - 180px);
         }
         div#descripcion>p {
-            font-size: 18px !important;
+            font-size: 14px !important;
         }
         .adicionales>h5 {
             font-size: 14px !important;
@@ -251,6 +260,12 @@
     @media (max-width: 576px) {
         .menu__buttom>h5 {
             display: none;
+        }
+        #encabezado__subTitulo {
+            font-size: 14px;
+        }
+        #encabezado {
+            height: 174px !important;
         }
         #pestañaPrincipal {
             height: auto;

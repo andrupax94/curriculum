@@ -8,9 +8,12 @@
     </div>
   </div>
   <div id="descripcion" class="col-12">
-    <p> Soy un programador junior cuya especialización es la programación web en PHP, Javascript, Typescript y maquetación en CSS, Uso frameworks como AngularJS, AngularTS y Bootstrap para el frontend y Laravel para el backend</p>
-    <p>Puedo realizar otras tareas relacionadas con el área de sistemas e informática, como instalación y configuración de redes LAN, servicio técnico y diagnóstico de computadores, formateo e instalación de SO, Tareas básicas en Microsoft Azure, etc. </p>
-    <p>Por otra parte, estoy dispuesto a aprender nuevos conocimientos relacionados con la programación redes e informática.</p>
+    <p ng-if="lang==='es-ES'"> Soy un programador junior cuya especialización es la programación web en PHP, Javascript, Typescript y maquetación en CSS, Uso frameworks como AngularJS, AngularTS y Bootstrap para el frontend y Laravel para el backend</p>
+    <p ng-if="lang==='es-ES'">Puedo realizar otras tareas relacionadas con el área de sistemas e informática, como instalación y configuración de redes LAN, servicio técnico y diagnóstico de computadores, formateo e instalación de SO, Tareas básicas en Microsoft Azure, etc. </p>
+    <p ng-if="lang==='es-ES'">Por otra parte, estoy dispuesto a aprender nuevos conocimientos relacionados con la programación redes e informática.</p>
+    <p ng-if="lang==='en-EN'">I am a junior programmer specializing in web programming in PHP, Javascript, Typescript, and CSS layout, I use frameworks like AngularJS, AngularTS, and Bootstrap for the front end and Laravel for the backend</p>
+    <p ng-if="lang==='en-EN'">I can perform other tasks related to the area of systems and computing, such as installation and configuration of LAN networks, technical service and diagnosis of computers, OS formatting, and installation, basic tasks in Microsoft Azure, etc.</p>
+    <p ng-if="lang==='en-EN'">On the other hand, I am willing to learn new knowledge related to network and computer programming.</p>
 
   </div>
   <div id="adicionales" class="row p-0 m-auto">
