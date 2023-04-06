@@ -1,13 +1,15 @@
 function verificaLang(route, $rootScope) {
-   var ln = navigator.language || navigator.userLanguage;
+
    /*Validar que no se encuentre en la pagina correspondiente a su idioma*/
    let pagActual = window.location.pathname;
-
-   if (route.current.params.lang !== 'gb') {
-      var ln = route.current.params.lang;
+   var ln = 'es';
+   if (route.current.params.lang !== undefined) {
+      ln = route.current.params.lang;
+   } else {
+      ln = navigator.language || navigator.userLanguage;
    }
-   const regex = /\/([a-z]{2}-[A-Z]{2})\/|\/((es)|(gb)|(en))\//ig;
-   if (regex.test(pagActual)) {
+
+   function verLn() {
       if (ln.indexOf('en') !== -1) {
          $rootScope.lang = 'en-EN';
       } else if (ln.indexOf('es') !== -1) {
@@ -16,10 +18,13 @@ function verificaLang(route, $rootScope) {
          route.current.params.lang = 'es-ES';
          $rootScope.lang = 'es-ES';
       }
-
+   }
+   verLn();
+   const regex = /\/([a-z]{2}-[A-Z]{2})\/|\/((es)|(gb)|(en))\//ig;
+   if (regex.test(pagActual)) {
       $('html').attr('lang', $rootScope.lang);
    } else {
-      window.location.href = 'gb/personales';
+      window.location.href = $rootScope.lang + '/personales';
    }
 }
 candres.config(function($routeProvider) {
@@ -65,7 +70,13 @@ candres.config(function($routeProvider) {
          }
       }
    }).otherwise({
-      redirectTo: 'gb/personales',
+
+      resolve: {
+         page: function(page, $route, $rootScope) {
+            verificaLang($route, $rootScope);
+
+         }
+      }
    });
 
 
