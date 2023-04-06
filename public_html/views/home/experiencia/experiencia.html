@@ -1,25 +1,31 @@
 <link rel="stylesheet" href="views/home/experiencia/experiencia.css">
 <div ng-controller="homeExperiencia" id='' class='container row'>
-    <div class="label col-12">
-        <div class="label__icon" getsvg="image/experiencia.svg,#FFFFFF"></div>
-        <div class="label__scuare"></div>
-        <div class="label__rightScuare">
-            <h5>Experiencia</h5>
-        </div>
+  <div class="label col-12">
+    <div class="label__icon" getsvg="image/experiencia.svg,#FFFFFF"></div>
+    <div class="label__scuare"></div>
+    <div class="label__rightScuare">
+      <h5 ng-if="lang==='es-ES'">Experiencia</h5>
+      <h5 ng-if="lang==='en-EN'">Work Exp.</h5>
     </div>
-    <div class="experiencia__container col-12 row">
-        <div class="experiencia animation" ng-repeat="ex in experiencia track by $index">
-            <div class="experiencia_bg">
-                <div class="experiencia__header">[[ex.puesto]]</div>
-                <p class="experiencia__empresa"><b>Empresa:</b>[[ex.empresa]]</p>
-                <p class="experiencia__funciones"><b>Funciones:</b>
-                    <ul>
-                        <li ng-repeat="funcion in ex.funciones track by $index">[[funcion]]</li>
-                    </ul>
-                </p>
+  </div>
+  <div class="experiencia__container col-12 row">
+    <div class="experiencia animation" ng-repeat="ex in experiencia track by $index">
+      <div class="experiencia_bg">
+        <div ng-if="lang==='es-ES'||ex.puesto===undefined" class="experiencia__header">[[ex.puesto]]</div>
+        <div ng-if="lang==='en-EN'&&ex.puestoEn!==undefined" class="experiencia__header">[[ex.puestoEn]]</div>
+        <p ng-if="lang==='es-ES'||ex.empresa===undefined" class="experiencia__empresa"><b>Empresa:</b>[[ex.empresa]]</p>
+        <p ng-if="lang==='en-EN'&&ex.empresaEn!==undefined" class="experiencia__empresa"><b>Company:</b>[[ex.empresaEn]]</p>
+        <p class="experiencia__funciones">
+          <b ng-if="lang==='es-ES'">Funciones:</b>
+          <b ng-if="lang==='en-EN'">Functions:</b>
+          <ul>
+            <li ng-if="lang==='es-ES'||ex.funciones===undefined" ng-repeat="funcion in ex.funciones track by $index">[[funcion]]</li>
+            <li ng-if="lang==='en-EN'&&ex.funcionesEn!==undefined" ng-repeat="funcion in ex.funcionesEn track by $index">[[funcion]]</li>
+          </ul>
+        </p>
 
-            </div>
-            <div class="animation periodo d-none d-sm-flex"></div>
-        </div>
+      </div>
+      <div class="animation periodo d-none d-sm-flex"></div>
     </div>
+  </div>
 </div>

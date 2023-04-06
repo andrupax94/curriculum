@@ -4,12 +4,14 @@
     <div class="label__icon" getsvg="image/habilidades.svg,#FFFFFF"></div>
     <div class="label__scuare"></div>
     <div class="label__rightScuare">
-      <h5>Habilidades</h5>
+      <h5 ng-if="lang==='es-ES'">Habilidades</h5>
+      <h5 ng-if="lang==='en-EN'">Skills</h5>
     </div>
   </div>
   <div class="row col-12 habilidades__supercontainer">
     <div ng-repeat="habilidad in habilidades track by $index" ng-if="$index/take<habilidadPage&&$index/take>=habilidadPage-1" class="habilidades__container col-12 col-sm-6 row">
-      <h5 class="animation col-12">[[habilidad.name]]</h5>
+      <h5 ng-if="lang==='es-ES'||habilidad.nameEn===undefined" class="animation col-12">[[habilidad.name]]</h5>
+      <h5 ng-if="lang==='en-EN'&&habilidad.nameEn!==undefined" class="animation col-12">[[habilidad.nameEn]]</h5>
       <div class="habilidad__container col-12">
         <div class="habilidad__icono animation" style="background-color: #[[habilidad.iconColor]];" getsvg="image/[[habilidad.icon]].svg,#[[habilidad.iconFill]]"></div>
         <div class="habilidad__scuare animation" style="background-color: #[[habilidad.scuare]];">

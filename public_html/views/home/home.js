@@ -1,6 +1,8 @@
-candres.controller("home", function($scope, $location, $rootScope, carga, andres, $http, page) {
+candres.controller("home", function($scope, $location, $timeout, $rootScope, carga, andres, $http, page) {
    // Initialising the canvas
-
+   $timeout(() => {
+      $scope.lang = $rootScope.lang;
+   }, 500);
    $scope.page;
    $scope.cambiaPage = function(pageName) {
       if ($scope.page !== pageName) {

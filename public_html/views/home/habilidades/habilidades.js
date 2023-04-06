@@ -121,6 +121,7 @@ candres.controller("homeHabilidades", function($scope, carga, andres, $http, $ti
    $scope.habilidades.push({
       iconFill: 'ffffff',
       name: 'Ingles',
+      nameEn: 'English',
       iconColor: 'c41825',
       icon: 'ingles',
       scuare: '104789',

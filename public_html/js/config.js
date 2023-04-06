@@ -47,7 +47,7 @@ candres.config(function($routeProvider) {
       resolve: {
          page: function(page, $route, $rootScope) {
             verificaLang($route, $rootScope);
-            page.asigna('habilidades');
+            page.asigna('experiencia');
          }
       }
    });
@@ -57,7 +57,7 @@ candres.config(function($routeProvider) {
       resolve: {
          page: function(page, $route, $rootScope) {
             verificaLang($route, $rootScope);
-            page.asigna('habilidades');
+            page.asigna('formacion');
          }
       }
    }).otherwise({
