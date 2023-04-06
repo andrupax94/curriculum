@@ -6,17 +6,21 @@ function verificaLang(route, $rootScope) {
    if (route.current.params.lang !== 'gb') {
       var ln = route.current.params.lang;
    }
-   if (ln.indexOf('en') !== -1) {
-      $rootScope.lang = 'en-EN';
-   } else if (ln.indexOf('es') !== -1) {
-      $rootScope.lang = 'es-ES';
+   const regex = /\/([a-z]{2}-[A-Z]{2})\/|\/((es)|(gb)|(en))\//ig;
+   if (regex.test(pagActual)) {
+      if (ln.indexOf('en') !== -1) {
+         $rootScope.lang = 'en-EN';
+      } else if (ln.indexOf('es') !== -1) {
+         $rootScope.lang = 'es-ES';
+      } else {
+         route.current.params.lang = 'es-ES';
+         $rootScope.lang = 'es-ES';
+      }
+
+      $('html').attr('lang', $rootScope.lang);
    } else {
-      route.current.params.lang = 'es-ES';
-      $rootScope.lang = 'es-ES';
+      window.location.href = 'gb/personales';
    }
-
-   $('html').attr('lang', $rootScope.lang);
-
 }
 candres.config(function($routeProvider) {
 

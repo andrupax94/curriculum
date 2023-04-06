@@ -15,9 +15,9 @@ candres.controller("body", function($scope, $route, $timeout, $rootScope, carga,
    $scope.cambiaLang = function(e, lang) {
       element = $(e.currentTarget).attr('class').indexOf('firstFlag');
       if (element === -1) {
-         var URLactual = $(location).attr('href');
-         const regex = /curriculum.test\/[A-z]{2}/ig;
-         URLactual = URLactual.replace(regex, 'curriculum.test/' + lang);
+         var URLactual = window.location.pathname;
+         const regex = /\/([a-z]{2}-[A-Z]{2})\/|\/((es)|(gb)|(en))\//ig;
+         URLactual = URLactual.replace(regex, '/' + lang + '/');
          window.location.href = URLactual;
       }
    }
