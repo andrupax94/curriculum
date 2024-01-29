@@ -1,7 +1,3 @@
-<?php
-use Barryvdh\Debugbar\Facades\Debugbar;
-Debugbar::enable();
-?>
 <!doctype html>
 <html ng-app="candres" ng-controller="htmlControl" lang="es-ES">
 
